@@ -187,7 +187,7 @@ classDiagram
     class Tier3 {
         +$50 / station
         +Raspberry Pi 5
-        +7" Touch Display
+        +7 inch Touch Display
         +PyQt5 Dashboard
         +SQLite Replay
         +Auto Brackets
