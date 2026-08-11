@@ -23,6 +23,11 @@ Eliminated players become invisible "ghosts" that can still see all player posit
 | Ghost spotting | Can "ping" location to teammates (band vibrates for team) | Team buzz | White flash for team |
 | Last alive | All ghosts focus on you; you see all enemy positions | Heartbeat | Rapid team color |
 
+## Tier Requirements
+
+- **Tier 0 only** — Core band ($12/player)
+- No additional hardware needed
+
 ## Variants
 
 | Variant | Change | Difficulty |

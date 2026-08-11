@@ -2,7 +2,7 @@
 
 ## Overview
 
-Bomb defusal mode. Attackers plant a bomb at one of two sites. Defenders protect sites. The twist: bomb proximity creates a "tension field" on every player's band — the closer you are to the bomb, the more intense the haptic feedback. Defenders can "feel" when attackers are near a site.
+Bomb defusal with physical bomb nodes. Attackers plant a bomb at one of two sites. Defenders protect sites. The bomb node creates "tension" — proximity to the bomb triggers haptic feedback on every player's band.
 
 ## Rules
 
@@ -10,10 +10,21 @@ Bomb defusal mode. Attackers plant a bomb at one of two sites. Defenders protect
 |------|--------|
 | Teams | Attackers vs Defenders, 4–6 players each |
 | Rounds | Best of 7 |
-| Bomb Sites | 2 sites (A and B) |
-| Plant Time | 5s uninterrupted at site |
-| Defuse Time | 7s uninterrupted |
+| Bomb Sites | 2 bomb nodes (A and B) |
+| Plant | Hold ACTION on bomb node for 5s uninterrupted |
+| Defuse | Hold ACTION on planted bomb for 7s uninterrupted |
 | Win Condition | Attackers: plant + detonate (45s fuse). Defenders: defuse or eliminate all attackers. |
+
+## Node Behavior (Bomb Node)
+
+| State | LED Ring | OLED | Buzzer |
+|-------|----------|------|--------|
+| Idle | White | "BOMB SITE A" | None |
+| Planting | Blinking red | "PLANTING..." + bar | Beep every 1s |
+| Planted | Red countdown blink | "45... 44... 43..." | Tick every 5s |
+| Defusing | Blinking green | "DEFUSING..." + bar | Steady tone |
+| Defused | Solid green | "DEFUSED!" | Victory tone |
+| Detonated | Solid white | "BOOM" | Long tone |
 
 ## Band Behavior
 
@@ -28,10 +39,16 @@ Bomb defusal mode. Attackers plant a bomb at one of two sites. Defenders protect
 
 ## Proximity Mechanics
 
-- Bomb emits BLE beacon at -4dBm
+- Bomb node emits BLE beacon at -4dBm
 - Every band within 15m receives proximity signal
 - Haptic intensity = `1 / distance^2` — closer = more urgent
 - Defenders get directional arrow pointing to nearest bomb site when within 10m
+
+## Tier Requirements
+
+- **Tier 0** — Core band ($12/player)
+- **Tier 1** — 2x Bomb Nodes ($15 each = $30)
+- **Total field cost:** $176 + $30 = **$206**
 
 ## Variants
 

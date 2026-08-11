@@ -1,0 +1,21 @@
+{
+  "field": {
+    "width": 50,
+    "height": 30,
+    "name": "Standard Arena"
+  },
+  "aps": [
+    {"id": "AP-01", "x": 0, "y": 0, "tx_power": -30, "path_loss": 2.5},
+    {"id": "AP-02", "x": 25, "y": 0, "tx_power": -30, "path_loss": 2.5},
+    {"id": "AP-03", "x": 50, "y": 0, "tx_power": -30, "path_loss": 2.5},
+    {"id": "AP-04", "x": 0, "y": 15, "tx_power": -30, "path_loss": 2.5},
+    {"id": "AP-05", "x": 50, "y": 15, "tx_power": -30, "path_loss": 2.5},
+    {"id": "AP-06", "x": 25, "y": 30, "tx_power": -30, "path_loss": 2.5}
+  ],
+  "checkpoints": [
+    {"id": "CP-1", "x": 10, "y": 15},
+    {"id": "CP-2", "x": 25, "y": 15},
+    {"id": "CP-3", "x": 40, "y": 15}
+  ],
+  "modes": ["spectre", "hunter_prey", "ghost", "capture_flag", "domination", "search_destroy", "data_heist", "infection", "vip_escort", "battle_royale", "frontline", "overwatch", "tournament"]
+}

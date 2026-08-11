@@ -1,78 +1,80 @@
-# SpectreBand — Modular Paintball Game System
+# SpectreBand — Tiered Paintball Game System
 
 <p align="center">
-  <img src="https://img.shields.io/badge/hardware-ESP32--C3%20%7C%20OLED%20%7C%20BLE%205.0-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/players-8--64%20per%20field-green?style=flat-square" />
-  <img src="https://img.shields.io/badge/latency-%3C150ms-orange?style=flat-square" />
-  <img src="https://img.shields.io/badge/band-cost-%7E%2412-lightgrey?style=flat-square" />
-  <img src="https://img.shields.io/badge/field-kit-%7E%24150-lightgrey?style=flat-square" />
+  <img src="https://img.shields.io/badge/tiers-4%20levels-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/band-%2412%2Fplayer-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/field-kit-%2480%2B-lightgrey?style=flat-square" />
   <img src="https://img.shields.io/badge/modes-11%20built--in-purple?style=flat-square" />
+  <img src="https://img.shields.io/badge/insurance-compliant-brightgreen?style=flat-square" />
   <img src="https://img.shields.io/badge/license-MIT-black?style=flat-square" />
 </p>
 
-**SpectreBand** is a modular paintball game system. Venues buy a field kit. Players rent or buy a wristband. Each game mode is a different way to use positioning, proximity, and haptic feedback — not just "see through walls."
+**SpectreBand** is a tiered paintball game system. Fields buy what they can afford. Players rent bands. Each tier adds hardware and unlocks new game modes. All modes work with masks ON — no exceptions.
 
 ---
 
-## How It Works
+## Insurance-First Design
 
-| Layer | What It Does | Tech | Cost |
-|-------|-------------|------|------|
-| **Band** | Wrist-worn. Radar HUD, haptic hits, team LED, auto-pair. | ESP32-C3 + OLED + BLE | ~$12/player |
-| **Field Kit** | 6x WiFi AP anchors + Pi server + router. | ESP32-C3 AP nodes | ~$150/field |
-| **Cloud** | Optional. Leaderboards, replays, match analytics. | FastAPI + SQLite | $29/mo/venue |
-
----
-
-## Game Modes
-
-| Mode | Type | Core Mechanic | Band Behavior | Players | Duration |
-|------|------|--------------|---------------|---------|----------|
-| [Spectre](modes/spectre/README.md) | Assassination | One player per team has wall-penetrating vision | Spectre sees all enemies; others see only teammates | 4v4–8v8 | 10 min |
-| [Hunter-Prey](modes/hunter_prey/README.md) | Pulse Vision | All players get 3s wall vision every 60s | Vibrate 1s before pulse; red dots flash | 5v5–10v10 | 15 min |
-| [Ghost](modes/ghost/README.md) | Respawn Intel | Dead players become invisible spotters | Dead band = green dots only; living = full radar | 6v6 | 12 min |
-| [Capture the Flag](modes/capture_flag/README.md) | CTF | Positioning reveals flag carrier to enemy team | Flag carrier = pulsing yellow dot; enemies see it | 5v5–8v8 | 15 min |
-| [Domination](modes/domination/README.md) | Zone Control | Hold zones to reveal enemies inside captured zones | Captured zone = red dots visible inside boundary | 5v5–10v10 | 12 min |
-| [Search & Destroy](modes/search_destroy/README.md) | Bomb Defusal | Bomb site proximity triggers band vibration | Near bomb = rapid pulse; defusing = steady tone | 4v4–6v6 | 10 min |
-| [Infection](modes/infection/README.md) | Zombie | Infected players chase survivors; survivors see infected through walls | Survivor = red dots (infected); infected = only survivor dots | 6–16 | 10 min |
-| [VIP Escort](modes/vip_escort/README.md) | Escort | VIP has no weapons; team must extract across field | VIP = gold dot; team sees VIP always; enemy sees VIP every 30s | 5v5 | 12 min |
-| [Battle Royale](modes/battle_royale/README.md) | Shrinking Zone | Safe zone shrinks; players outside take damage | Outside zone = red border warning + damage tick haptic | 8–32 | 15 min |
-| [Data Heist](modes/data_heist/README.md) | Objective Chain | Hack 3 terminals in sequence; positioning reveals hacker | Hacking = pulsing purple dot; team defends | 4v4–6v6 | 15 min |
-| [Blindside](modes/blindside/README.md) | Pure Audio | No radar; haptic patterns indicate direction of last hit | OLED off. Haptic only. | 3v3–5v5 | 10 min |
-| [Overwatch](modes/overwatch/README.md) | Commander | One player gets drone-view; team follows pings | Overwatch band = zoomed 2D map. Others = standard radar | 4v4 | 15 min |
+| Constraint | How We Handle It |
+|------------|-----------------|
+| Masks stay on at all times | OLED is on the **wristband**, visible without touching mask |
+| No night games | All modes work in daylight; no "night vision" gimmicks |
+| No physical contact rules | BLE proximity hit detection replaces "touch" mechanics |
+| Field owner liability | All hardware is low-voltage (3.3V), battery-powered, no mains |
+| Player safety | Haptic feedback replaces audio cues that could mask field marshal calls |
 
 ---
 
-## Band Hardware
+## Tier System
 
-| Component | Part | Price | Purpose |
-|-----------|------|-------|---------|
-| MCU | ESP32-C3-MINI-1 | $2.50 | WiFi scan + BLE beacon |
-| Display | SSD1306 0.96" OLED | $1.50 | Radar HUD |
-| Haptic | DRV2605 + 10mm motor | $1.00 | Hit alerts, direction cues |
-| LEDs | WS2812B x3 | $0.30 | Team color, hit flash, low battery |
-| Battery | 502535 500mAh LiPo | $2.50 | 4+ hour runtime |
-| Charger | MCP73831 + USB-C | $0.70 | LiPo charging |
-| PCB + Case + Strap | 30x40mm FR4 + TPU + NATO | $3.00 | Wrist-worn enclosure |
-| Passives | 0402 R/C | $0.50 | Decoupling, pullups |
-| **Total** | | **$12.00** | |
+| Tier | Name | Cost | What You Get | Unlocks Modes |
+|------|------|------|-------------|---------------|
+| **Tier 0** | Core Band | $12/player | Wristband: radar HUD, team LED, hit haptic | [Spectre](tiers/tier_0_band/modes/spectre/README.md), [Hunter-Prey](tiers/tier_0_band/modes/hunter_prey/README.md), [Ghost](tiers/tier_0_band/modes/ghost/README.md) |
+| **Tier 1** | Objective Node | +$15/node (shared) | Physical box on field: buttons, OLED, LEDs, buzzer | [Capture the Flag](tiers/tier_1_objective/modes/capture_flag/README.md), [Domination](tiers/tier_1_objective/modes/domination/README.md), [Search & Destroy](tiers/tier_1_objective/modes/search_destroy/README.md), [Data Heist](tiers/tier_1_objective/modes/data_heist/README.md) |
+| **Tier 2** | Hit Detection | +$3/band upgrade | BLE RSSI proximity sensor for accurate hit registration | [Infection](tiers/tier_2_hitdetect/modes/infection/README.md), [VIP Escort](tiers/tier_2_hitdetect/modes/vip_escort/README.md), [Battle Royale](tiers/tier_2_hitdetect/modes/battle_royale/README.md) |
+| **Tier 3** | Command Station | +$50/station (shared) | Referee tablet with full field map, replay, scoring | [Overwatch](tiers/tier_3_command/modes/overwatch/README.md), [Tournament](tiers/tier_3_command/modes/tournament/README.md) |
 
-[Full band docs →](band/README.md)
+**Field Startup Cost:**
+- Minimum: $80 (Pi 5 server + router) + 8x Tier 0 bands ($96) = **$176 for 8 players**
+- Full kit: $176 + 3x Tier 1 nodes ($45) + 8x Tier 2 upgrades ($24) + 1x Tier 3 station ($50) = **$295 for full experience**
 
 ---
 
-## Field Kit
+## Architecture
 
-| Component | Qty | Unit | Total | Purpose |
-|-----------|-----|------|-------|---------|
-| AP Node (ESP32-C3-DevKitM) | 6 | $6 | $36 | Anchor points |
-| Server (Raspberry Pi 5 4GB) | 1 | $80 | $80 | FastAPI + WebSocket |
-| Router (GL.iNet MT300N-V2) | 1 | $25 | $25 | Field WiFi |
-| Enclosures (IP65 box) | 6 | $3 | $18 | Weatherproof |
-| Power (5V 3A adapters) | 6 | $4 | $24 | AP power |
-| **Total** | | | **$183** | |
-
-[Full field docs →](field/README.md)
+```
+                    SPECTRE FIELD
+    ┌─────────────────────────────────────────────┐
+    │                                             │
+    │   ┌──────────┐         WiFi RSSI            │
+    │   │  Tier 0  │ ──────────────────>          │
+    │   │   Band   │         5 Hz                 │
+    │   │ $12/player│                            │
+    │   └────┬─────┘                            │
+    │        │ BLE proximity                    │
+    │        v                                  │
+    │   ┌──────────┐      ┌──────────┐          │
+    │   │ Tier 2   │      │ Tier 1   │          │
+    │   │ Hit Mod  │      │ Objective│          │
+    │   │ +$3      │      │ Node     │          │
+    │   │ Accurate │      │ $15/box  │          │
+    │   │ hits     │      │ Buttons  │          │
+    │   └────┬─────┘      │ OLED     │          │
+    │        │            │ Buzzer   │          │
+    │        │            └────┬─────┘          │
+    │        │                 │ MQTT             │
+    │        └─────────────────┼────────────────>│
+    │                          │                 │
+    │   ┌──────────┐           v                 │
+    │   │ Tier 3   │      ┌──────────┐          │
+    │   │ Command  │<─────│  Server  │          │
+    │   │ Station  │  WS   │ (Pi 5)   │          │
+    │   │ $50      │       │ $80      │          │
+    │   │ Map view │       └──────────┘          │
+    │   └──────────┘                             │
+    │                                             │
+    └─────────────────────────────────────────────┘
+```
 
 ---
 
@@ -84,26 +86,56 @@ git clone https://github.com/toxicwind/paintball-field.git
 cd paintball-field
 
 # Deploy field server
-cd field
-pip install -r server/requirements.txt
-python server/main.py --config config/field_layout.json --mode capture_flag
+cd field_server
+pip install -r requirements.txt
+python server.py --config field_layout.json
 
-# Flash a band
-cd ../band/firmware
+# Flash a Tier 0 band
+cd ../tiers/tier_0_band/firmware
+pio run --target upload --environment esp32c3
+
+# Flash a Tier 1 objective node
+cd ../../tier_1_objective/firmware
 pio run --target upload --environment esp32c3
 ```
 
 ---
 
-## Architecture
+## Game Modes by Tier
 
-```
-Player Band (ESP32-C3)
-  ├── WiFi RSSI scan ──> AP Mesh (6x) ──> MQTT ──> Game Server (Pi 5)
-  ├── BLE proximity ──> Hit detection (player-to-player)
-  ├── LoRaWAN ──> Long-range hit confirmation / game events
-  └── OLED + Haptic + LED <── WebSocket <── Server state (5Hz)
-```
+### Tier 0 — Core Band Only ($12/player)
+
+| Mode | Mechanic | Duration | Players |
+|------|----------|----------|---------|
+| [Spectre](tiers/tier_0_band/modes/spectre/README.md) | One player per team sees all enemies permanently | 10 min | 4v4–8v8 |
+| [Hunter-Prey](tiers/tier_0_band/modes/hunter_prey/README.md) | All players get 3s wall vision every 60s | 15 min | 5v5–10v10 |
+| [Ghost](tiers/tier_0_band/modes/ghost/README.md) | Dead players become invisible spotters for team | 12 min | 6v6 |
+
+### Tier 1 — Band + Objective Node (+$15/node)
+
+| Mode | Mechanic | Duration | Players | Nodes Needed |
+|------|----------|----------|---------|-------------|
+| [Capture the Flag](tiers/tier_1_objective/modes/capture_flag/README.md) | Box = flag; carrier visible to enemies | 15 min | 5v5–8v8 | 2 |
+| [Domination](tiers/tier_1_objective/modes/domination/README.md) | Stand near box to capture zone; reveals enemies in zone | 12 min | 5v5–10v10 | 3–5 |
+| [Search & Destroy](tiers/tier_1_objective/modes/search_destroy/README.md) | Plant/defuse box; proximity haptic tension | 10 min | 4v4–6v6 | 2 |
+| [Data Heist](tiers/tier_1_objective/modes/data_heist/README.md) | Hack 3 boxes in sequence; hacker position revealed | 15 min | 4v4–6v6 | 3 |
+
+### Tier 2 — Band + Hit Detection (+$3/band)
+
+| Mode | Mechanic | Duration | Players |
+|------|----------|----------|---------|
+| [Infection](tiers/tier_2_hitdetect/modes/infection/README.md) | BLE proximity infection; survivors see infected | 10 min | 6–16 |
+| [VIP Escort](tiers/tier_2_hitdetect/modes/vip_escort/README.md) | Protect VIP across field; enemy sees VIP every 30s | 12 min | 5v5 |
+| [Battle Royale](tiers/tier_2_hitdetect/modes/battle_royale/README.md) | Shrinking zone; last standing wins | 15 min | 8–32 |
+| [Frontline](tiers/tier_2_hitdetect/modes/frontline/README.md) | Checkpoint respawn; deplete enemy reinforcements | 15 min | 6v6–10v10 |
+
+### Tier 3 — Band + Command Station (+$50/station)
+
+| Mode | Mechanic | Duration | Players |
+|------|----------|----------|---------|
+| [Overwatch](tiers/tier_3_command/modes/overwatch/README.md) | Commander sees full map; pings team | 15 min | 4v4 |
+| [Tournament](tiers/tier_3_command/modes/tournament/README.md) | Referee validation, replay, brackets | Varies | 4v4–8v8 |
+| [Tournament](tiers/tier_3_command/modes/tournament/README.md) | Referee validates hits; generates match replay | Varies | 4v4–8v8 |
 
 ---
 

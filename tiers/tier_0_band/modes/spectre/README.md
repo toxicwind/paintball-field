@@ -2,7 +2,7 @@
 
 ## Overview
 
-One player per team is designated the Spectre. The Spectre sees all enemy positions through walls permanently (red dots). Their team must protect them. If the enemy Spectre is eliminated, your team wins. This creates a "protect the VIP + assassinate their VIP" dual objective.
+One player per team is the Spectre. The Spectre sees all enemy positions through walls permanently (red dots). Their team must protect them. If the enemy Spectre is eliminated, your team wins.
 
 ## Rules
 
@@ -22,6 +22,11 @@ One player per team is designated the Spectre. The Spectre sees all enemy positi
 | Protecting Spectre | Green dot = your Spectre; red = enemies | Warning when Spectre takes fire | Team color |
 | Enemy Spectre spotted | Purple dot = enemy Spectre (if your team has intel) | Urgent pulse | Red flash |
 | Spectre down | Screen flash + "SPECTRE DOWN" | Long buzz | White flash |
+
+## Tier Requirements
+
+- **Tier 0 only** — Core band ($12/player)
+- No additional hardware needed
 
 ## Variants
 

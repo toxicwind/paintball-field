@@ -22,6 +22,11 @@ All players get 3 seconds of wall-penetrating vision every 60 seconds. The band 
 | Pulse active | Red dots = all enemies | None | White pulse |
 | Pulse ending | "3... 2... 1..." countdown | Slow ticks | Dimming white |
 
+## Tier Requirements
+
+- **Tier 0 only** — Core band ($12/player)
+- No additional hardware needed
+
 ## Variants
 
 | Variant | Change | Difficulty |
