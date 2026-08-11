@@ -1,0 +1,139 @@
+{
+  "field_id": "blitz_urban_combat",
+  "field_name": "Blitz Urban Combat",
+  "parent_venue": "Blitz Paintball Dacono",
+  "address": "5340 Summit Blvd, Dacono, CO 80514",
+  "coordinates": {
+    "lat": 40.0223,
+    "lon": -104.9555
+  },
+  "survey": {
+    "date": "2026-08-12T07:17:26.327548",
+    "method": "satellite_imagery",
+    "source_file": "_raw_urban_combat_satellite.png",
+    "disclaimer": "Imagery may become outdated. Speedball tournament bunkers may have been added post-survey. Verify layout before deployment.",
+    "change_log": [
+      {
+        "date": "2026-08-11",
+        "note": "Field layout corrected: Urban Combat is the SOUTH field, connected to Castle (middle) via courtyard fencing."
+      }
+    ]
+  },
+  "dimensions": {
+    "area_acres": 3.34,
+    "perimeter_m": 543.95,
+    "estimated_length_m": 120,
+    "estimated_width_m": 110
+  },
+  "surface": "dirt_grass_mix",
+  "features": {
+    "bunkers": {
+      "count": 200,
+      "types": [
+        "inflatable",
+        "wooden_barrel",
+        "concrete_culvert",
+        "speedball_tournament_bunkers"
+      ],
+      "density": "very_high",
+      "signature": "Massive urban field. Warehouse ruins, dense bunker maze, vehicle wrecks."
+    },
+    "structures": [
+      "netting_perimeter",
+      "light_poles",
+      "warehouse_ruins",
+      "north_fence_gate_to_castle"
+    ],
+    "terrain_notes": "SOUTH field. Largest bunker density at Blitz. Dense urban layout. North gate connects to Castle courtyard.",
+    "connections": {
+      "north": "blitz_castle",
+      "via": "courtyard_fence_gate"
+    }
+  },
+  "systems": {
+    "ghostnet_compatible": true,
+    "spectreband_compatible": true,
+    "recommended_primary": "ghostnet",
+    "reason": "Massive field with 200+ bunkers. GhostNet for objective tracking across dense urban layout. North gate allows flow from Castle."
+  },
+  "ghostnet_config": {
+    "gateway_position": {
+      "x_m": 60,
+      "y_m": 55,
+      "z_m": 5,
+      "location": "central warehouse roof"
+    },
+    "objective_slots": 6,
+    "max_players": 40,
+    "lora_range_m": 500,
+    "notes": "6 objectives scattered across ruins. North gate objective unlocks Castle access."
+  },
+  "spectreband_config": {
+    "ap_count": 8,
+    "ap_placement": [
+      {
+        "id": "UC-AP-01",
+        "x_m": 20,
+        "y_m": 20,
+        "z_m": 3,
+        "channel": 1
+      },
+      {
+        "id": "UC-AP-02",
+        "x_m": 100,
+        "y_m": 20,
+        "z_m": 3,
+        "channel": 6
+      },
+      {
+        "id": "UC-AP-03",
+        "x_m": 20,
+        "y_m": 90,
+        "z_m": 3,
+        "channel": 11
+      },
+      {
+        "id": "UC-AP-04",
+        "x_m": 100,
+        "y_m": 90,
+        "z_m": 3,
+        "channel": 1
+      },
+      {
+        "id": "UC-AP-05",
+        "x_m": 60,
+        "y_m": 30,
+        "z_m": 3,
+        "channel": 6
+      },
+      {
+        "id": "UC-AP-06",
+        "x_m": 60,
+        "y_m": 80,
+        "z_m": 3,
+        "channel": 11
+      },
+      {
+        "id": "UC-AP-07",
+        "x_m": 35,
+        "y_m": 55,
+        "z_m": 3,
+        "channel": 1
+      },
+      {
+        "id": "UC-AP-08",
+        "x_m": 85,
+        "y_m": 55,
+        "z_m": 3,
+        "channel": 6
+      }
+    ],
+    "calibration": {
+      "path_loss_exponent": 2.5,
+      "tx_power_dbm": -30,
+      "rssi_at_1m": -40,
+      "multipath_factor": 1.4,
+      "notes": "Dense buildings = significant multipath. 8 APs for 3-4m accuracy."
+    }
+  }
+}
