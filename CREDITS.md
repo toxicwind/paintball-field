@@ -41,3 +41,8 @@
 ## License
 
 Original code: MIT. Borrowed code retains original licenses (MIT/BSD-3-Clause).
+
+### Top-Down Tactical Map Rendering
+- Pattern: Military tactical map symbology (MIL-STD-2525)
+- Pattern: Game minimap rendering (Counter-Strike radar style)
+- Implementation: matplotlib patches, FancyBboxPatch, RegularPolygon
