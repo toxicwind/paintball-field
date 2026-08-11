@@ -1,10 +1,8 @@
-Part,Part Number,Supplier,Unit Price,Qty,Total,Purpose,Notes
-Rack Frame,3D printed PETG + aluminum rails,Self/Printables,$8.00,1,$8.00,16-slot frame,Design in docs/charging_rack/
-Pogo Pins,2.54mm spring pogo 4-pin,LCSC,$0.15,16,$2.40,Contact points per slot,Gold plated for durability
-PSU,Mean Well LRS-150-5,Amazon,$18.00,1,$18.00,5V 30A central power,One PSU powers all 16 slots
-USB-C Receptacles,16x TYPE-C 16P SMD,LCSC,$0.30,16,$4.80,Per-slot charging port,Alternative to pogo pins
-Status LEDs,16x 3mm green/red bicolor,LCSC,$0.10,16,$1.60,Charging status per slot,Green=full Red=charging
-Current Limiters,16x TP4056 modules,LCSC,$0.80,16,$12.80,Per-cell charging control,Safer than central charging
-Power Distribution,PCB bus bar + fuses,Self,$3.00,1,$3.00,Fused distribution per slot,Prevents cascade failure
-Fan,40mm 5V brushless,AliExpress,$2.00,1,$2.00,Cooling for 16 simultaneous charges,Optional but recommended
-,,,,,$52.60,,
+Part,LCSC Part #,Manufacturer,MPN,Supplier,Unit Price,Qty,Total,Purpose,Notes
+PETG Frame,-,Self,3D printed,Printables,$8.00,1,$8.00,16-slot rack,"PETG, 2 perimeters, 20% infill"
+Pogo Pin,C2988368,Generic,2.54mm spring pogo,LCSC,$0.15,64,$9.60,Contacts,"Gold plated, 4 per slot"
+Mean Well PSU,-,Mean Well,LRS-150-5,Amazon,$18.00,1,$18.00,Power,"5V 30A, 150W"
+TP4056 Module,C165948,Generic,TP4056,LCSC,$0.80,16,$12.80,Per-cell charging,"1A per slot, independent"
+Bicolor LED,C2894693,Generic,3mm green/red,LCSC,$0.10,16,$1.60,Status,"Green=full, Red=charging"
+Bus Bar PCB,-,Self,PCB + fuses,LCSC,$3.00,1,$3.00,Distribution,"Fused per slot"
+40mm Fan,-,Generic,5V brushless,AliExpress,$2.00,1,$2.00,Cooling,"Optional but recommended"

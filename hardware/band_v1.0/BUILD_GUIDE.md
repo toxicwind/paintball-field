@@ -1,8 +1,8 @@
-# SpectreBand v1.1 Build Guide
+# SpectreBand v1.0 Build Guide
 
 ## Overview
 
-This guide walks you through building a SpectreBand v1.1 from scratch. Assembly time: ~45 minutes per band. Cost: ~$19.70 in parts.
+This guide walks you through building a SpectreBand v1.0 from scratch. Assembly time: ~45 minutes per band. Cost: ~$12.40 in parts.
 
 ## Tools Required
 
@@ -19,9 +19,9 @@ This guide walks you through building a SpectreBand v1.1 from scratch. Assembly 
 
 ### Step 1: PCB Preparation (5 min)
 
-1. Order PCBs from JLCPCB using `hardware/band_v1.1/gerbers.zip`
+1. Order PCBs from JLCPCB using gerbers (see `hardware/band_v1.0/gerbers/`)
    - 2-layer, 1.6mm, HASL, any color
-   - 5 pieces = ~$7 shipped
+   - 5 pieces = ~$7 shipped (JLCPCB new customer deal)
 2. Clean PCB with isopropyl alcohol
 3. Apply solder paste to pads using stencil or syringe
 
@@ -32,11 +32,11 @@ Place components in this order (smallest to largest):
 1. **0402 passives** (resistors, capacitors) — use tweezers
 2. **MCP73831T** charging IC — orientation matters, dot = pin 1
 3. **USB-C connector** — align with PCB edge
-4. **ESP32-C3-MINI-1** — align antenna with PCB edge
-5. **BMI270 IMU** — dot = pin 1, align with silkscreen
-6. **SH1106 OLED** — solder header pins, do not solder display yet
-7. **WS2812B LEDs** — orientation matters, pin 1 marked on PCB
-8. **Piezo shock sensor** — solder wires, not SMD
+4. **ESP32-C3-MINI-1** — align antenna with PCB edge (LCSC C2935306)
+5. **DRV2605L** — dot = pin 1, align with silkscreen (LCSC C527464)
+6. **SSD1306 OLED** — solder header pins, do not solder display yet (LCSC C2890361)
+7. **WS2812B LEDs** — orientation matters, pin 1 marked on PCB (LCSC C114581)
+8. **10mm ERM motor** — solder wires, not SMD (LCSC C2894691)
 
 ### Step 3: Reflow Soldering (10 min)
 
@@ -48,25 +48,22 @@ Place components in this order (smallest to largest):
 
 ### Step 4: Through-Hole Components (5 min)
 
-1. Solder piezo shock sensor wires to PIEZO_PIN (GPIO 13)
-2. Solder haptic motor wires to HAPTIC_PIN (GPIO 11)
-3. Solder battery connector (JST-PH 2.0)
-4. Attach silicone strap loops
+1. Solder ERM motor wires to HAPTIC_PIN (GPIO 11)
+2. Solder battery connector (JST-PH 2.0)
+3. Attach NATO strap loops
 
 ### Step 5: Battery Installation (5 min)
 
-1. Connect 2x 300mAh hard pouch LiPo batteries in parallel
-2. Insert into steel shield + DW5812 protection PCB
-3. Slide into case bottom
-4. Connect to JST-PH connector
+1. Connect 502535 500mAh LiPo battery
+2. Slide into case bottom
+3. Connect to JST-PH connector
 
 ### Step 6: Case Assembly (5 min)
 
-1. Place PCB into polycarbonate case top
+1. Place PCB into TPU case top
 2. Align OLED window with display
-3. Press TPU gasket into groove
-4. Snap case halves together
-5. Thread 20mm silicone strap through loops
+3. Snap case halves together
+4. Thread 20mm NATO strap through loops
 
 ### Step 7: Firmware Flash (2 min)
 
@@ -94,10 +91,9 @@ Hold BOOT button, press RESET, release BOOT. Band will show self-test screen.
 | Self-test FAIL | Bad solder joint | Reflow, check with multimeter |
 | Battery not charging | MCP73831T orientation | Rotate 180 degrees |
 | Haptic weak | Wrong motor polarity | Swap wires |
-| Shock sensor always triggered | Sensitivity too high | Add 10k resistor in series |
 
 ## Safety Notes
 
-- **LiPo batteries can catch fire if punctured**. The steel shield + DW5812 protection is mandatory for paintball use. A 300fps direct hit can puncture an unprotected pouch.
-- **Do not charge unattended**. Use the charging rack, not random USB chargers.
-- **IP54 rating** means splash-resistant, not waterproof. Do not submerge.
+- **LiPo batteries can catch fire if punctured**. Do not use in paintball without protective case.
+- **Do not charge unattended**. Use the charging rack.
+- **TPU case is not IP rated**. Keep bands dry.
