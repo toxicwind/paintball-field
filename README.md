@@ -679,19 +679,21 @@ We welcome contributions from hardware hackers, firmware developers, game design
 
 Need help setting up SpectreBand at your field? Want to order pre-built bands? Have a feature request?
 
-- **Discord**: [Join our community](https://discord.gg/spectreband) — ask questions, share builds, find local fields
-- **Email**: [setup@spectreband.io](mailto:setup@spectreband.io) — for field setup consultations and bulk orders
-- **Twitter/X**: [@SpectreBand](https://twitter.com/SpectreBand) — updates, new modes, field spotlights
-- **YouTube**: [SpectreBand Channel](https://youtube.com/@spectreband) — build guides, gameplay footage, tournament streams
-- **GitHub Issues**: [Report bugs](https://github.com/toxicwind/paintball-field/issues) — firmware bugs, server crashes, documentation errors
-- **GitHub Discussions**: [Feature requests](https://github.com/toxicwind/paintball-field/discussions) — new game modes, hardware ideas, integrations
+- **Hit me up**: [denverchrisortega@gmail.com](mailto:denverchrisortega@gmail.com) — questions, trash talk, bulk orders, whatever
+- **Text me**: 303-667-3831 — I actually respond, usually while soldering
+- **GitHub**: [github.com/toxicwind](https://github.com/toxicwind) — where the magic happens
+- **Portfolio**: [resume.effusionlabs.com](https://resume.effusionlabs.com) — yes I do LLM infra too
+- **GitHub Issues**: [Report bugs](https://github.com/toxicwind/paintball-field/issues) — or roast my code, I can take it
+- **GitHub Discussions**: [Feature requests](https://github.com/toxicwind/paintball-field/discussions) — dream up new game modes, argue about balance
 
-### Commercial Inquiries
+### Wanna Make Money With This?
 
-For field licensing, bulk hardware orders (50+ bands), white-label solutions, or partnership opportunities:
+Field licensing, bulk hardware (50+ bands), white-label, partnership — hit me up:
 
-- **Business Email**: [biz@spectreband.io](mailto:biz@spectreband.io)
-- **Response Time**: Usually within 24 hours
+- **Email**: [denverchrisortega@gmail.com](mailto:denverchrisortega@gmail.com)
+- **Phone**: 303-667-3831
+- **Location**: Westminster, CO — come grab a beer and talk shop
+- **Response Time**: Usually same day unless I'm on the field testing
 
 ---
 
@@ -722,6 +724,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 ---
 
 <p align="center">
-  <b>Built with 💜 by the paintball community, for the paintball community.</b><br>
-  <sub>SpectreBand is not affiliated with any paintball equipment manufacturer. All trademarks belong to their respective owners.</sub>
+  <b>Built with 💜 by Christopher Ortega — LLM Infrastructure Consultant & Systems Architect</b><br>
+  <b>Westminster, CO · 303-667-3831 · denverchrisortega@gmail.com</b><br>
+  <sub>SpectreBand is an open-source project. MIT licensed. Build it, break it, mod it, sell it. No lawyers, no limits.</sub>
 </p>
