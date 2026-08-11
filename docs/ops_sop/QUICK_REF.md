@@ -38,4 +38,4 @@ python src/main.py --config configs/blitz_outdoor_50x30.json
 
 ## CONTACT
 denverchrisortega@gmail.com
-303-667-3831
+REDACTED

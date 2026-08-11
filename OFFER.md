@@ -40,10 +40,10 @@ The same skills built this:
 ## Contact
 
 - **Email**: denverchrisortega@gmail.com
-- **Phone**: 303-667-3831 (text preferred, I solder while I talk)
+- **Phone**: REDACTED (text preferred, I solder while I talk)
 - **GitHub**: github.com/toxicwind
 - **Portfolio**: resume.effusionlabs.com
-- **Location**: Westminster, CO — local pickup for hardware, remote for everything else
+- **Location**: Colorado — local pickup for hardware, remote for everything else
 
 ## No-BS Guarantee
 

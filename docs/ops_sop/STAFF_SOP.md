@@ -58,7 +58,7 @@
 ## CONTACT
 
 - **Tech support**: denverchrisortega@gmail.com
-- **Urgent**: 303-667-3831 (text preferred)
+- **Urgent**: REDACTED (text preferred)
 - **GitHub issues**: github.com/toxicwind/paintball-field/issues
 
 ---

@@ -350,18 +350,18 @@ Print the SOP on 8.5x11, laminate, attach to charging rack.
 ## Contact
 
 - **Hit me up**: denverchrisortega@gmail.com
-- **Text me**: 303-667-3831
+- **Text me**: REDACTED
 - **GitHub**: github.com/toxicwind
 - **Portfolio**: resume.effusionlabs.com
-- **Location**: Westminster, CO
+- **Location**: Colorado
 
 ### Wanna Make Money With This?
 
 Field licensing, bulk hardware (50+ bands), white-label, partnership:
 
 - **Email**: denverchrisortega@gmail.com
-- **Phone**: 303-667-3831
-- **Location**: Westminster, CO - come grab a beer and talk shop
+- **Phone**: REDACTED
+- **Location**: Colorado - come grab a beer and talk shop
 
 ---
 
@@ -371,6 +371,6 @@ MIT. Build it, break it, mod it, sell it. No lawyers, no limits.
 
 <p align="center">
   <b>Built with 💜 by Christopher Ortega</b><br>
-  <b>Westminster, CO · 303-667-3831 · denverchrisortega@gmail.com</b><br>
+  <b>Colorado · REDACTED · denverchrisortega@gmail.com</b><br>
   <sub>SpectreBand is an open-source project. MIT licensed.</sub>
 </p>
