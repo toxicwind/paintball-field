@@ -1,0 +1,16 @@
+Part,Part Number,Supplier,Unit Price,Qty,Total,Purpose,Notes,Alt Part
+MCU,ESP32-C3-MINI-1,JLCPCB/LCSC,$2.50,1,$2.50,WiFi scan + BLE beacon,Keep - proven,ESP32-C3-WROOM-02
+Display,SH1106 1.3" I2C OLED,LCSC,$2.30,1,$2.30,Radar HUD - readable in sun,Upgrade from 0.96",SSD1306 0.96" (-$0.80)
+Haptic Motor,10mm ERM 3V,LCSC,$0.40,1,$0.40,Direct PWM drive - BUZZ not fancy,Remove DRV2605L save $1 + complexity,
+IMU,BMI270 Bosch,LCSC,$0.80,1,$0.80,Dead reckoning - kills 50% RSSI jitter,Essential for v1.1,
+Shock Sensor,Piezo disc 20mm w/ mass,LCSC,$0.30,1,$0.30,First real hit detection,Not BLE proximity alone,
+LEDs,WS2812B 5050 RGB,LCSC,$0.10,3,$0.30,Team color + hit flash + low bat,Keep,
+Battery,2x 300mAh hard pouch LiPo,AliExpress,$3.00,2,$6.00,Hard pouch - 300fps safe,Replace 500mAh soft pouch - puncture risk
+Battery Protection,DW5812 + steel shield,LCSC,$0.80,1,$0.80,300fps impact protection,Direct hit can puncture unprotected pouch
+Charger,MCP73831T + TYPE-C 16P,LCSC,$0.70,1,$0.70,USB-C charging,Keep,
+Case Top,Polycarbonate injection mold,JLCPCB,$2.00,1,$2.00,IP54 - paint resistant,Replace TPU - paint destroys TPU in 1 day
+Case Gasket,TPU seal ring,Self/Printables,$0.50,1,$0.50,IP54 seal between halves,
+Strap,20mm silicone watch band,AliExpress,$1.50,1,$1.50,Paint resistant - NATO absorbs paint + stinks,Replace NATO strap
+PCB,2-layer 35x45mm FR4,JLCPCB,$1.80,1,$1.80,Mainboard - slightly larger for IMU,5pcq = $0.36/ea
+Passives,0402 R/C/pullups,LCSC,$0.60,1,$0.60,Decoupling + I2C pullups,Keep,
+,,,,,,$19.70,,

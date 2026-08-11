@@ -1,0 +1,12 @@
+Part,Part Number,Supplier,Unit Price,Qty,Total,Purpose,Notes
+MCU,ESP32-C3-DevKitM-1,AliExpress,$6.00,1,$6.00,AP mode + ESP-NOW backhaul,Use ESP-NOW not WiFi client for outdoor metal bunkers
+Display,SSD1306 0.96" I2C OLED,LCSC,$1.50,1,$1.50,Status display,Keep
+LED Ring,8x WS2812B 5050 circle,AliExpress,$1.20,1,$1.20,Zone ownership color,Keep
+Buttons,12mm tactile switch,LCSC,$0.20,2,$0.40,Action + Cancel,Keep
+Buzzer,5V active piezo,LCSC,$0.50,1,$0.50,Audio cues,Keep
+Battery,18650 2600mAh + holder,AliExpress,$4.00,1,$4.00,All-day runtime,Keep
+Charger,TP4056 + USB-C module,LCSC,$1.00,1,$1.00,Field charging,Keep
+Enclosure,IP65 ABS box 120x80x50mm,AliExpress,$3.00,1,$3.00,Weatherproof,Keep
+Power,12V PoE splitter or 5V 3A USB,AliExpress,$5.00,1,$5.00,PoE preferred - USB adapters die in field,Upgrade from USB adapters
+Mount,Pole clamp + U-bolt,AliExpress,$2.00,1,$2.00,2.5m height mount facing down,Keep
+,,,,,$24.10,,

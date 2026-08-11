@@ -1,0 +1,10 @@
+{
+  "name": "Spectre",
+  "tier": 0,
+  "blitz_ready": false,
+  "min_players": 6,
+  "max_players": 16,
+  "duration_min": 10,
+  "description": "One player per team sees all enemies permanently. Protect your Spectre.",
+  "blitz_notes": "SHELVE for now. Requires >3m accuracy for fair play. Enable after v1.1 calibration on Blitz fields."
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Infection",
+  "tier": 2,
+  "blitz_ready": false,
+  "min_players": 6,
+  "max_players": 16,
+  "duration_min": 10,
+  "description": "One infected, chase survivors. Survivors see infected through walls.",
+  "blitz_notes": "SHELVE until real hit detection works. BLE proximity infection = kids arguing about touches."
+}

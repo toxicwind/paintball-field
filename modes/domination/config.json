@@ -1,0 +1,18 @@
+{
+  "name": "Domination",
+  "tier": 1,
+  "blitz_ready": true,
+  "min_players": 6,
+  "max_players": 20,
+  "duration_min": 12,
+  "zones": 3,
+  "capture_time_s": 10,
+  "decay_time_s": 30,
+  "description": "Hold zone nodes to reveal enemies inside captured zones.",
+  "band_behavior": {
+    "capturing": "Progress bar + building rumble",
+    "captured": "Enemies inside = red dots",
+    "contested": "Alternating colors + alarm"
+  },
+  "blitz_notes": "Great for Urban Combat field. 3 zones across 60x40m = constant movement."
+}

@@ -1,0 +1,10 @@
+{
+  "name": "VIP Escort",
+  "tier": 2,
+  "blitz_ready": false,
+  "min_players": 8,
+  "max_players": 10,
+  "duration_min": 12,
+  "description": "Protect VIP across field. Enemy sees VIP every 30s.",
+  "blitz_notes": "SHELVE. Needs 8+ players and patient refs. Birthday parties don't have patience for VIP rules."
+}

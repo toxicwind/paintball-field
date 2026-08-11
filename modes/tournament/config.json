@@ -1,0 +1,10 @@
+{
+  "name": "Tournament",
+  "tier": 3,
+  "blitz_ready": false,
+  "min_players": 8,
+  "max_players": 16,
+  "duration_min": 20,
+  "description": "Referee validation, replay, brackets.",
+  "blitz_notes": "SHELVE. Needs proven hit validation or refs will hate you. Phase 3 only."
+}

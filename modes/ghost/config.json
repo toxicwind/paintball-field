@@ -1,0 +1,15 @@
+{
+  "name": "Ghost",
+  "tier": 0,
+  "blitz_ready": true,
+  "min_players": 6,
+  "max_players": 12,
+  "duration_min": 12,
+  "description": "Dead players become invisible spotters. See all players, ping locations to team.",
+  "band_behavior": {
+    "alive": "Green dots = teammates + ghosts",
+    "ghost": "All dots visible + 'GHOST MODE'",
+    "ping": "Can ping location to team (band vibrates for team)"
+  },
+  "blitz_notes": "Keeps eliminated kids engaged. No crying when you die \u2014 you become a spy."
+}
