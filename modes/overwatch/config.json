@@ -1,0 +1,10 @@
+{
+  "name": "Overwatch",
+  "tier": 3,
+  "blitz_ready": false,
+  "min_players": 6,
+  "max_players": 8,
+  "duration_min": 15,
+  "description": "Commander sees full map, pings team.",
+  "blitz_notes": "SHELVE. Needs command station + trained refs. Phase 3 only."
+}

@@ -1,0 +1,99 @@
+{
+  "field_id": "blitz_airsoft2",
+  "field_name": "Blitz Airsoft 2",
+  "parent_venue": "Blitz Paintball Dacono",
+  "address": "5340 Summit Blvd, Dacono, CO 80514",
+  "coordinates": {
+    "lat": 40.0223,
+    "lon": -104.9555
+  },
+  "survey": {
+    "date": "2026-08-12T05:13:54.674023",
+    "method": "satellite_imagery",
+    "source_file": "_raw_airsoft2_satellite.png",
+    "disclaimer": "Imagery may become outdated. Replace with new survey when field layout changes."
+  },
+  "dimensions": {
+    "area_acres": 0.64,
+    "perimeter_m": 206.38,
+    "estimated_length_m": 62,
+    "estimated_width_m": 41
+  },
+  "surface": "artificial_turf",
+  "features": {
+    "bunkers": {
+      "count": 38,
+      "types": [
+        "giant_spools",
+        "hyperball_tubes",
+        "wooden_barrel"
+      ],
+      "density": "medium_high",
+      "signature": "Central spool cluster creates natural arena"
+    },
+    "structures": [
+      "staging_area_west",
+      "netting_perimeter",
+      "light_poles"
+    ],
+    "terrain_notes": "Flat. Central spool cluster is dominant feature. Good for King of the Hill."
+  },
+  "systems": {
+    "ghostnet_compatible": true,
+    "spectreband_compatible": true,
+    "recommended_primary": "ghostnet",
+    "reason": "Signature central spool cluster = natural objective node placement. Perfect for King of the Hill."
+  },
+  "ghostnet_config": {
+    "gateway_position": {
+      "x_m": 5,
+      "y_m": 20,
+      "z_m": 3,
+      "location": "staging area roof"
+    },
+    "objective_slots": 4,
+    "max_players": 16,
+    "lora_range_m": 500,
+    "notes": "Central spool cluster is ideal for single-objective modes (King of the Hill). Corner slots for multi-objective."
+  },
+  "spectreband_config": {
+    "ap_count": 4,
+    "ap_placement": [
+      {
+        "id": "A2-AP-01",
+        "x_m": 10,
+        "y_m": 10,
+        "z_m": 2.5,
+        "channel": 1
+      },
+      {
+        "id": "A2-AP-02",
+        "x_m": 52,
+        "y_m": 10,
+        "z_m": 2.5,
+        "channel": 6
+      },
+      {
+        "id": "A2-AP-03",
+        "x_m": 10,
+        "y_m": 31,
+        "z_m": 2.5,
+        "channel": 11
+      },
+      {
+        "id": "A2-AP-04",
+        "x_m": 52,
+        "y_m": 31,
+        "z_m": 2.5,
+        "channel": 1
+      }
+    ],
+    "calibration": {
+      "path_loss_exponent": 2.3,
+      "tx_power_dbm": -30,
+      "rssi_at_1m": -40,
+      "multipath_factor": 1.1,
+      "notes": "Metal spools create minor multipath. 4 APs sufficient."
+    }
+  }
+}

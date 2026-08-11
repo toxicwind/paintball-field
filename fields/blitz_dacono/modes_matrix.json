@@ -1,0 +1,542 @@
+{
+  "blitz_airsoft1": {
+    "ghostnet_modes": {
+      "blackhawk_down": {
+        "compatible": false,
+        "reason": "No helicopter on this field"
+      },
+      "dead_drop": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Dense bunkers = excellent hiding spots for nodes"
+      },
+      "king_of_the_hill": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good central area for node"
+      },
+      "search_rescue": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Staging area = extraction point"
+      }
+    },
+    "spectreband_modes": {
+      "hunter_prey": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Dense field, pulse moments intense"
+      },
+      "ghost": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Ghost intel valuable"
+      },
+      "spectre": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field, VIP easy to find"
+      },
+      "capture_flag": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Fast flag runs"
+      },
+      "domination": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Multiple zones across dense field"
+      },
+      "data_heist": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Cover for hackers"
+      },
+      "search_destroy": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good bomb sites"
+      },
+      "frontline": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small for frontline"
+      },
+      "battle_royale": {
+        "compatible": false,
+        "rating": 2,
+        "reason": "Too small for BR"
+      },
+      "infection": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Dense field = infection spreads fast"
+      },
+      "vip_escort": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Short escort distance"
+      },
+      "overwatch": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field"
+      },
+      "tournament": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good for 5v5"
+      }
+    }
+  },
+  "blitz_airsoft2": {
+    "ghostnet_modes": {
+      "blackhawk_down": {
+        "compatible": false,
+        "reason": "No helicopter on this field"
+      },
+      "dead_drop": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Spools provide hiding spots"
+      },
+      "king_of_the_hill": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Central spool cluster = PERFECT KOTH"
+      },
+      "search_rescue": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Staging area = extraction point"
+      }
+    },
+    "spectreband_modes": {
+      "hunter_prey": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good pulse moments"
+      },
+      "ghost": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Ghost intel valuable"
+      },
+      "spectre": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field, VIP easy to find"
+      },
+      "capture_flag": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Fast flag runs"
+      },
+      "domination": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Multiple zones possible"
+      },
+      "data_heist": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Cover for hackers"
+      },
+      "search_destroy": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good bomb sites"
+      },
+      "frontline": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small for frontline"
+      },
+      "battle_royale": {
+        "compatible": false,
+        "rating": 2,
+        "reason": "Too small for BR"
+      },
+      "infection": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Spool cluster = infection nightmare"
+      },
+      "vip_escort": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Short escort distance"
+      },
+      "overwatch": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field"
+      },
+      "tournament": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good for 5v5"
+      }
+    }
+  },
+  "blitz_hyper_spool": {
+    "ghostnet_modes": {
+      "blackhawk_down": {
+        "compatible": false,
+        "reason": "No helicopter on this field"
+      },
+      "dead_drop": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Sparse cover, nodes harder to hide"
+      },
+      "king_of_the_hill": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Open field, hard to hold"
+      },
+      "search_rescue": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Long sight lines, extraction difficult"
+      }
+    },
+    "spectreband_modes": {
+      "hunter_prey": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Open field, less intense pulses"
+      },
+      "ghost": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Ghost intel valuable"
+      },
+      "spectre": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field, VIP easy to find"
+      },
+      "capture_flag": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Fast flag runs"
+      },
+      "domination": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Multiple zones possible"
+      },
+      "data_heist": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Cover for hackers"
+      },
+      "search_destroy": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good bomb sites"
+      },
+      "frontline": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small for frontline"
+      },
+      "battle_royale": {
+        "compatible": false,
+        "rating": 1,
+        "reason": "Far too small for BR"
+      },
+      "infection": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Open field, infection harder to spread"
+      },
+      "vip_escort": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Short escort distance"
+      },
+      "overwatch": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field"
+      },
+      "tournament": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good for 5v5"
+      }
+    }
+  },
+  "blitz_hyperball": {
+    "ghostnet_modes": {
+      "blackhawk_down": {
+        "compatible": false,
+        "reason": "No helicopter on this field"
+      },
+      "dead_drop": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Tube maze = excellent node hiding"
+      },
+      "king_of_the_hill": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Central diamond = natural KOTH"
+      },
+      "search_rescue": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Staging area = extraction point"
+      }
+    },
+    "spectreband_modes": {
+      "hunter_prey": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good pulse moments"
+      },
+      "ghost": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Ghost intel valuable"
+      },
+      "spectre": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field, VIP easy to find"
+      },
+      "capture_flag": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Fast flag runs"
+      },
+      "domination": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Tube maze = multiple natural zones"
+      },
+      "data_heist": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Tubes provide perfect hacker cover"
+      },
+      "search_destroy": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good bomb sites"
+      },
+      "frontline": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small for frontline"
+      },
+      "battle_royale": {
+        "compatible": false,
+        "rating": 2,
+        "reason": "Too small for BR"
+      },
+      "infection": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Tube maze = infection chaos"
+      },
+      "vip_escort": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Short escort distance"
+      },
+      "overwatch": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field"
+      },
+      "tournament": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good for 5v5"
+      }
+    }
+  },
+  "blitz_urban_combat": {
+    "ghostnet_modes": {
+      "blackhawk_down": {
+        "compatible": false,
+        "reason": "No helicopter"
+      },
+      "dead_drop": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Massive field, 200+ bunkers = infinite hiding spots"
+      },
+      "king_of_the_hill": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Central diamond = massive KOTH arena"
+      },
+      "search_rescue": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Multiple extraction points across field"
+      }
+    },
+    "spectreband_modes": {
+      "hunter_prey": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Massive field, intense pulse moments in buildings"
+      },
+      "ghost": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Ghost intel valuable"
+      },
+      "spectre": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field, VIP easy to find"
+      },
+      "capture_flag": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Fast flag runs"
+      },
+      "domination": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "6+ zones across building complexes"
+      },
+      "data_heist": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Buildings = perfect hacker cover"
+      },
+      "search_destroy": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good bomb sites"
+      },
+      "frontline": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Massive field, 5+ checkpoints possible"
+      },
+      "battle_royale": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "3.34 acres = PERFECT for BR. Only field large enough."
+      },
+      "infection": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Massive field = infection epic"
+      },
+      "vip_escort": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Long escort distance across urban terrain"
+      },
+      "overwatch": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Commander has real strategic depth on large field"
+      },
+      "tournament": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Only field that can host 10v10+ tournaments"
+      }
+    }
+  },
+  "blitz_castle": {
+    "ghostnet_modes": {
+      "blackhawk_down": {
+        "compatible": false,
+        "reason": "No helicopter on this field"
+      },
+      "dead_drop": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Castle walls = good node hiding"
+      },
+      "king_of_the_hill": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Keep = PERFECT KOTH. Siege gameplay."
+      },
+      "search_rescue": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Gatehouse = extraction point"
+      }
+    },
+    "spectreband_modes": {
+      "hunter_prey": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good pulse moments"
+      },
+      "ghost": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Ghost intel valuable"
+      },
+      "spectre": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field, VIP easy to find"
+      },
+      "capture_flag": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Castle siege = natural CTF variant"
+      },
+      "domination": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Walls = natural zone boundaries"
+      },
+      "data_heist": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Keep = natural hack site"
+      },
+      "search_destroy": {
+        "compatible": true,
+        "rating": 5,
+        "notes": "Gatehouse = bomb site. Walls = defense."
+      },
+      "frontline": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small for frontline, walls create chokepoints"
+      },
+      "battle_royale": {
+        "compatible": false,
+        "rating": 2,
+        "reason": "Too small for BR"
+      },
+      "infection": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Walls = infection chokepoints"
+      },
+      "vip_escort": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Short escort distance"
+      },
+      "overwatch": {
+        "compatible": true,
+        "rating": 3,
+        "notes": "Small field"
+      },
+      "tournament": {
+        "compatible": true,
+        "rating": 4,
+        "notes": "Good for 5v5"
+      }
+    }
+  }
+}

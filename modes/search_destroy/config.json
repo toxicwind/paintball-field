@@ -1,0 +1,13 @@
+{
+  "name": "Search & Destroy",
+  "tier": 1,
+  "blitz_ready": false,
+  "min_players": 6,
+  "max_players": 12,
+  "duration_min": 10,
+  "plant_time_s": 5,
+  "defuse_time_s": 7,
+  "fuse_time_s": 45,
+  "description": "Plant/defuse bomb at objective sites. Proximity haptic tension.",
+  "blitz_notes": "SHELVE until v1.1 shock sensor proven. Honor system plant/defuse gets messy with kids."
+}

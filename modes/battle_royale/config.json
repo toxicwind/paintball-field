@@ -1,0 +1,10 @@
+{
+  "name": "Battle Royale",
+  "tier": 2,
+  "blitz_ready": false,
+  "min_players": 8,
+  "max_players": 32,
+  "duration_min": 15,
+  "description": "Shrinking zone. Last standing wins.",
+  "blitz_notes": "SHELVE until UWB upgrade. 32 players on 2.5m accuracy = chaos. Needs 30cm for competitive BR."
+}

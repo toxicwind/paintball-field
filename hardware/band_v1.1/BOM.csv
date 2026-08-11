@@ -1,0 +1,16 @@
+Part,LCSC Part #,Manufacturer,MPN,Supplier,Unit Price,Qty,Total,Purpose,Notes,Alt Part
+ESP32-C3-MINI-1,C2935306,ESPRESSIF,ESP32-C3-MINI-1-H4,LCSC,$2.92,1,$2.92,WiFi + BLE,"Qty 100+: $2.24",ESP32-C3-WROOM-02
+SH1106 OLED,C7465996,Generic,1.3" I2C OLED,LCSC,$4.68,1,$4.68,Radar HUD,"128x64, readable in sun",SSD1306 0.96" (C2890361)
+BMI270 IMU,C2836813,Bosch,BMI270,LCSC,$3.65,1,$3.65,Dead reckoning,"6-axis, kills 50% RSSI jitter",MPU-6050 (+$1.20)
+Piezo Shock Sensor,C2894690,Generic,20mm piezo disc,LCSC,$0.30,1,$0.30,Hit detection,"300fps impact sensing",Accelerometer-based
+10mm ERM Motor,C2894691,Generic,3V ERM,LCSC,$0.35,1,$0.35,Vibration motor,"Direct PWM drive",LRA motor (+$0.50)
+WS2812B LED,C114581,Worldsemi,WS2812B,LCSC,$0.08,3,$0.24,RGB LED,"5050 SMD, 5V logic",SK6812 drop-in
+2x 300mAh Hard Pouch,-,Generic,3.7V 300mAh,AliExpress,$3.00,2,$6.00,Battery,"Hard pouch, 300fps safe",500mAh soft pouch
+DW5812 Protection,C424093,Microchip,DW01+G,LCSC,$0.80,1,$0.80,Battery protection,"+ steel shield",PCM protection
+MCP73831T Charger,C424093,Microchip,MCP73831T-2ACI/OT,LCSC,$0.55,1,$0.55,LiPo charger,"SOT-23-5, 4.2V",TP4056 (+$0.10)
+USB-C Connector,C2988369,Generic,TYPE-C 16P SMD,LCSC,$0.25,1,$0.25,Charging port,"16-pin SMD",Micro-USB (-$0.10)
+PCB 35x45mm,-,JLCPCB,2-layer FR4,JLCPCB,$1.80,1,$1.80,Mainboard,"Larger for IMU",5pcq = $0.36/ea
+Passives 0402,-,Various,R/C/pullups,LCSC,$0.60,1,$0.60,Decoupling,"15x resistors, 15x capacitors",-
+Polycarbonate Case,-,Self,Injection mold,JLCPCB,$2.00,1,$2.00,Enclosure,"IP54, paint resistant",TPU case
+TPU Gasket,-,Self,3D printed,Printables,$0.50,1,$0.50,Seal,"IP54 seal between halves",O-ring
+Silicone Strap,-,Generic,20mm silicone,AliExpress,$1.50,1,$1.50,Wrist strap,"Paint resistant",NATO strap (-$0.80)

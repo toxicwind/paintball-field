@@ -1,0 +1,39 @@
+{
+  "_deprecated": "This monolithic config is deprecated. Use modular configs in airsoft1/config.json and airsoft2/config.json instead.",
+  "_migration_note": "The old 4-field config (urban_combat, military_base, hyperball, hyper_spool) was pre-survey. These new configs are post-satellite-survey and accurate.",
+  "field_name": "Blitz Paintball Dacono",
+  "address": "5340 Summit Blvd, Dacono, CO 80514",
+  "phone": "303-337-7109",
+  "website": "blitzpaintball.net",
+  "contact": "Blitz Staff",
+  "field_type": "outdoor",
+  "modular_configs": [
+    "airsoft1/config.json",
+    "airsoft2/config.json"
+  ],
+  "templates": [
+    "templates/objectives.json",
+    "templates/field_sdk_template.json"
+  ],
+  "modes_matrix": "modes_matrix.json",
+  "raw_imagery": [
+    "_raw_airsoft1_satellite.png",
+    "_raw_airsoft2_satellite.png"
+  ],
+  "imagery_disclaimer": "Raw satellite imagery is disposable. Replace with new survey when field layout changes. Configs are the source of truth.",
+  "legacy_fields": {
+    "urban_combat": "Merged into airsoft1 (dense bunker field)",
+    "military_base": "Helicopter field \u2014 requires separate survey when satellite available",
+    "hyperball": "Merged into airsoft2 (spool cluster field)",
+    "hyper_spool": "Merged into airsoft2 (spool cluster field)"
+  },
+  "renders_3d": [
+    "airsoft1/render_3d.png",
+    "airsoft2/render_3d.png",
+    "hyper_spool/render_3d.png",
+    "hyperball/render_3d.png",
+    "military/render_3d.png"
+  ],
+  "sdk_version": "1.4",
+  "_version": "0.94"
+}

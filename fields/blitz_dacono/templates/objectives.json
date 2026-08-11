@@ -1,0 +1,67 @@
+{
+  "template_version": "1.0",
+  "description": "Modular objective placement templates. Copy and adapt per-field.",
+  "templates": {
+    "corner_quad": {
+      "name": "Four Corners",
+      "objective_count": 4,
+      "placement_rule": "Place at 25% and 75% along each diagonal from corners",
+      "spacing_min_m": 15,
+      "visibility": "Each objective should have line-of-sight to at least one other",
+      "modes": [
+        "dead_drop",
+        "domination"
+      ],
+      "field_size_min_m": [
+        40,
+        30
+      ]
+    },
+    "central_arena": {
+      "name": "Central Arena",
+      "objective_count": 1,
+      "placement_rule": "Dead center of field, elevated if possible",
+      "spacing_min_m": 0,
+      "visibility": "Visible from all angles, hardest to hold",
+      "modes": [
+        "king_of_the_hill"
+      ],
+      "field_size_min_m": [
+        30,
+        20
+      ]
+    },
+    "linear_checkpoint": {
+      "name": "Linear Checkpoints",
+      "objective_count": 3,
+      "placement_rule": "Equally spaced along field centerline",
+      "spacing_min_m": 20,
+      "visibility": "Sequential capture required",
+      "modes": [
+        "frontline",
+        "dead_drop"
+      ],
+      "field_size_min_m": [
+        50,
+        30
+      ]
+    },
+    "helicopter_extraction": {
+      "name": "Helicopter Extraction",
+      "objective_count": 3,
+      "placement_rule": "One inside helo, one under tail, one in nearest structure",
+      "spacing_min_m": 10,
+      "visibility": "Varied \u2014 one hard, one medium, one easy",
+      "modes": [
+        "blackhawk_down"
+      ],
+      "field_size_min_m": [
+        40,
+        40
+      ],
+      "requires": [
+        "helicopter_structure"
+      ]
+    }
+  }
+}

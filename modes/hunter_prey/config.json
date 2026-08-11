@@ -1,0 +1,19 @@
+{
+  "name": "Hunter-Prey",
+  "tier": 0,
+  "blitz_ready": true,
+  "min_players": 4,
+  "max_players": 20,
+  "duration_min": 15,
+  "pulse_interval_s": 60,
+  "pulse_duration_s": 3,
+  "warning_before_pulse_s": 1,
+  "description": "All players get 3s wall vision every 60s. Band vibrates 1s before pulse.",
+  "band_behavior": {
+    "normal": "Green dots = teammates only",
+    "warning": "Rapid buzz + 'PULSE INCOMING'",
+    "pulse": "Red dots = all enemies visible",
+    "ending": "3-2-1 countdown"
+  },
+  "blitz_notes": "Best pilot mode. No hit detection needed. Honor system works. Kids love the tension."
+}

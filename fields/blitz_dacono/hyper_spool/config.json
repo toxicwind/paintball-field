@@ -1,0 +1,91 @@
+{
+  "field_id": "blitz_hyper_spool",
+  "field_name": "Blitz Hyper-Spool",
+  "parent_venue": "Blitz Paintball Dacono",
+  "address": "5340 Summit Blvd, Dacono, CO 80514",
+  "coordinates": {
+    "lat": 40.0223,
+    "lon": -104.9555
+  },
+  "survey": {
+    "date": "2026-08-12T05:18:53.489857",
+    "method": "satellite_imagery",
+    "source_file": "_raw_hyper_spool_satellite.png",
+    "disclaimer": "Imagery may become outdated. Replace with new survey when field layout changes."
+  },
+  "dimensions": {
+    "area_acres": 0.43,
+    "perimeter_m": 167.87,
+    "estimated_length_m": 55,
+    "estimated_width_m": 32
+  },
+  "surface": "dirt_grass_mix",
+  "features": {
+    "bunkers": {
+      "count": 30,
+      "types": [
+        "giant_spools",
+        "wooden_barrel",
+        "inflatable"
+      ],
+      "density": "medium",
+      "signature": "Scattered spools across open dirt, minimal structure"
+    },
+    "structures": [
+      "netting_perimeter",
+      "light_poles"
+    ],
+    "terrain_notes": "Open field, sparse cover. Fast movement, long sight lines. Good for beginners."
+  },
+  "systems": {
+    "ghostnet_compatible": true,
+    "spectreband_compatible": true,
+    "recommended_primary": "ghostnet",
+    "reason": "Small open field, beginner-friendly. GhostNet haptic + simple objectives perfect for first-timers."
+  },
+  "ghostnet_config": {
+    "gateway_position": {
+      "x_m": 27,
+      "y_m": 16,
+      "z_m": 3,
+      "location": "staging area roof"
+    },
+    "objective_slots": 3,
+    "max_players": 12,
+    "lora_range_m": 500,
+    "notes": "Small field, 3 objectives max. Central objective creates natural focal point."
+  },
+  "spectreband_config": {
+    "ap_count": 3,
+    "ap_placement": [
+      {
+        "id": "HS-AP-01",
+        "x_m": 10,
+        "y_m": 10,
+        "z_m": 2.5,
+        "channel": 1
+      },
+      {
+        "id": "HS-AP-02",
+        "x_m": 45,
+        "y_m": 10,
+        "z_m": 2.5,
+        "channel": 6
+      },
+      {
+        "id": "HS-AP-03",
+        "x_m": 27,
+        "y_m": 22,
+        "z_m": 2.5,
+        "channel": 11
+      }
+    ],
+    "calibration": {
+      "path_loss_exponent": 2.1,
+      "tx_power_dbm": -30,
+      "rssi_at_1m": -40,
+      "multipath_factor": 0.9,
+      "notes": "Open field, minimal multipath. 3 APs sufficient for 2-3m accuracy on small field."
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "field_id": "blitz_hyperball",
+  "field_name": "Blitz Hyperball",
+  "parent_venue": "Blitz Paintball Dacono",
+  "address": "5340 Summit Blvd, Dacono, CO 80514",
+  "coordinates": {
+    "lat": 40.0223,
+    "lon": -104.9555
+  },
+  "survey": {
+    "date": "2026-08-12T05:18:53.490230",
+    "method": "satellite_imagery",
+    "source_file": "_raw_hyperball_satellite.png",
+    "disclaimer": "Imagery may become outdated. Replace with new survey when field layout changes."
+  },
+  "dimensions": {
+    "area_acres": 0.67,
+    "perimeter_m": 210.23,
+    "estimated_length_m": 65,
+    "estimated_width_m": 42
+  },
+  "surface": "dirt_grass_mix",
+  "features": {
+    "bunkers": {
+      "count": 36,
+      "types": [
+        "hyperball_tubes",
+        "wooden_barrel",
+        "inflatable"
+      ],
+      "density": "high",
+      "signature": "Dense hyperball tube maze with central diamond structures"
+    },
+    "structures": [
+      "netting_perimeter",
+      "light_poles",
+      "central_diamond_formation"
+    ],
+    "terrain_notes": "Dense hyperball tubes create maze-like gameplay. Central diamond structures are dominant feature."
+  },
+  "systems": {
+    "ghostnet_compatible": true,
+    "spectreband_compatible": true,
+    "recommended_primary": "ghostnet",
+    "reason": "Dense tube maze = natural objective placement. Central diamond = perfect King of the Hill."
+  },
+  "ghostnet_config": {
+    "gateway_position": {
+      "x_m": 32,
+      "y_m": 21,
+      "z_m": 3,
+      "location": "staging area roof"
+    },
+    "objective_slots": 4,
+    "max_players": 20,
+    "lora_range_m": 500,
+    "notes": "Central diamond = natural single objective. Corner objectives for multi-point modes."
+  },
+  "spectreband_config": {
+    "ap_count": 4,
+    "ap_placement": [
+      {
+        "id": "HB-AP-01",
+        "x_m": 10,
+        "y_m": 10,
+        "z_m": 2.5,
+        "channel": 1
+      },
+      {
+        "id": "HB-AP-02",
+        "x_m": 55,
+        "y_m": 10,
+        "z_m": 2.5,
+        "channel": 6
+      },
+      {
+        "id": "HB-AP-03",
+        "x_m": 10,
+        "y_m": 32,
+        "z_m": 2.5,
+        "channel": 11
+      },
+      {
+        "id": "HB-AP-04",
+        "x_m": 55,
+        "y_m": 32,
+        "z_m": 2.5,
+        "channel": 1
+      }
+    ],
+    "calibration": {
+      "path_loss_exponent": 2.4,
+      "tx_power_dbm": -30,
+      "rssi_at_1m": -40,
+      "multipath_factor": 1.2,
+      "notes": "Dense tube structures create moderate multipath. 4 APs recommended for accuracy."
+    }
+  }
+}

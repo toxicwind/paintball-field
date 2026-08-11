@@ -1,0 +1,311 @@
+{
+  "field_name": "Blitz Paintball Dacono",
+  "address": "5340 Summit Blvd, Dacono, CO 80514",
+  "phone": "303-337-7109",
+  "website": "blitzpaintball.net",
+  "contact": "Blitz Staff",
+  "field_type": "outdoor",
+  "fields": [
+    {
+      "id": "urban_combat",
+      "name": "Urban Combat",
+      "size_m": [
+        60,
+        40
+      ],
+      "description": "6 large complex structures, 4 flag stations, 18 shed structures, 200+ bunkers",
+      "surface": "dirt/grass",
+      "recommended_modes": [
+        "domination",
+        "capture_flag",
+        "frontline",
+        "hunter_prey"
+      ],
+      "ap_placement": [
+        {
+          "id": "UC-AP-01",
+          "x": 5,
+          "y": 5,
+          "z": 2.5,
+          "channel": 1
+        },
+        {
+          "id": "UC-AP-02",
+          "x": 30,
+          "y": 5,
+          "z": 2.5,
+          "channel": 6
+        },
+        {
+          "id": "UC-AP-03",
+          "x": 55,
+          "y": 5,
+          "z": 2.5,
+          "channel": 11
+        },
+        {
+          "id": "UC-AP-04",
+          "x": 5,
+          "y": 35,
+          "z": 2.5,
+          "channel": 1
+        },
+        {
+          "id": "UC-AP-05",
+          "x": 30,
+          "y": 35,
+          "z": 2.5,
+          "channel": 6
+        },
+        {
+          "id": "UC-AP-06",
+          "x": 55,
+          "y": 35,
+          "z": 2.5,
+          "channel": 11
+        }
+      ],
+      "calibration": {
+        "path_loss_exponent": 2.8,
+        "tx_power_dbm": -30,
+        "rssi_at_1m": -45,
+        "multipath_factor": 1.3,
+        "notes": "Metal structures cause multipath. Calibrate per-AP after install."
+      }
+    },
+    {
+      "id": "military_base",
+      "name": "Military Base 'The Base'",
+      "size_m": [
+        50,
+        50
+      ],
+      "description": "40ft helicopter, command post, supply center, 7 flag stations, missile silos, 100+ bunkers",
+      "surface": "dirt/grass",
+      "recommended_modes": [
+        "search_destroy",
+        "domination",
+        "data_heist",
+        "spectre"
+      ],
+      "ap_placement": [
+        {
+          "id": "MB-AP-01",
+          "x": 5,
+          "y": 5,
+          "z": 2.5,
+          "channel": 1
+        },
+        {
+          "id": "MB-AP-02",
+          "x": 25,
+          "y": 5,
+          "z": 2.5,
+          "channel": 6
+        },
+        {
+          "id": "MB-AP-03",
+          "x": 45,
+          "y": 5,
+          "z": 2.5,
+          "channel": 11
+        },
+        {
+          "id": "MB-AP-04",
+          "x": 5,
+          "y": 25,
+          "z": 2.5,
+          "channel": 1
+        },
+        {
+          "id": "MB-AP-05",
+          "x": 45,
+          "y": 25,
+          "z": 2.5,
+          "channel": 6
+        },
+        {
+          "id": "MB-AP-06",
+          "x": 25,
+          "y": 45,
+          "z": 2.5,
+          "channel": 11
+        }
+      ],
+      "calibration": {
+        "path_loss_exponent": 3.0,
+        "tx_power_dbm": -30,
+        "rssi_at_1m": -48,
+        "multipath_factor": 1.5,
+        "notes": "Metal helicopter and missile silos create severe multipath. Use 8 APs if possible."
+      }
+    },
+    {
+      "id": "hyperball",
+      "name": "Hyperball",
+      "size_m": [
+        55,
+        50
+      ],
+      "description": "30,000 sq ft, 68 bunkers, 14 stand-up per side, 3 massive center 50 bunkers",
+      "surface": "dirt",
+      "recommended_modes": [
+        "hunter_prey",
+        "ghost",
+        "frontline",
+        "battle_royale"
+      ],
+      "ap_placement": [
+        {
+          "id": "HB-AP-01",
+          "x": 5,
+          "y": 5,
+          "z": 2.5,
+          "channel": 1
+        },
+        {
+          "id": "HB-AP-02",
+          "x": 27,
+          "y": 5,
+          "z": 2.5,
+          "channel": 6
+        },
+        {
+          "id": "HB-AP-03",
+          "x": 50,
+          "y": 5,
+          "z": 2.5,
+          "channel": 11
+        },
+        {
+          "id": "HB-AP-04",
+          "x": 5,
+          "y": 25,
+          "z": 2.5,
+          "channel": 1
+        },
+        {
+          "id": "HB-AP-05",
+          "x": 50,
+          "y": 25,
+          "z": 2.5,
+          "channel": 6
+        },
+        {
+          "id": "HB-AP-06",
+          "x": 27,
+          "y": 45,
+          "z": 2.5,
+          "channel": 11
+        }
+      ],
+      "calibration": {
+        "path_loss_exponent": 2.5,
+        "tx_power_dbm": -30,
+        "rssi_at_1m": -42,
+        "multipath_factor": 1.1,
+        "notes": "Plastic culvert pipe bunkers - less multipath than metal. Good accuracy field."
+      }
+    },
+    {
+      "id": "hyper_spool",
+      "name": "Hyper-Spool",
+      "size_m": [
+        30,
+        25
+      ],
+      "description": "5-10 player field, giant spools and hyperball bunkers",
+      "surface": "dirt",
+      "recommended_modes": [
+        "spectre",
+        "hunter_prey",
+        "ghost"
+      ],
+      "ap_placement": [
+        {
+          "id": "HS-AP-01",
+          "x": 5,
+          "y": 5,
+          "z": 2.5,
+          "channel": 1
+        },
+        {
+          "id": "HS-AP-02",
+          "x": 15,
+          "y": 5,
+          "z": 2.5,
+          "channel": 6
+        },
+        {
+          "id": "HS-AP-03",
+          "x": 25,
+          "y": 5,
+          "z": 2.5,
+          "channel": 11
+        },
+        {
+          "id": "HS-AP-04",
+          "x": 5,
+          "y": 20,
+          "z": 2.5,
+          "channel": 1
+        },
+        {
+          "id": "HS-AP-05",
+          "x": 15,
+          "y": 20,
+          "z": 2.5,
+          "channel": 6
+        },
+        {
+          "id": "HS-AP-06",
+          "x": 25,
+          "y": 20,
+          "z": 2.5,
+          "channel": 11
+        }
+      ],
+      "calibration": {
+        "path_loss_exponent": 2.3,
+        "tx_power_dbm": -30,
+        "rssi_at_1m": -40,
+        "multipath_factor": 1.0,
+        "notes": "Small field, excellent accuracy. Perfect for pilot testing."
+      }
+    }
+  ],
+  "pilot_plan": {
+    "phase_1_weeks": "1-2",
+    "phase_1_bands": 8,
+    "phase_1_tier": "Tier 0 only",
+    "phase_1_modes": [
+      "hunter_prey",
+      "ghost"
+    ],
+    "phase_1_field": "hyper_spool",
+    "phase_1_notes": "Honor system hit detection. Log everything. Test silicone straps vs paint.",
+    "phase_2_weeks": "3-4",
+    "phase_2_nodes": 3,
+    "phase_2_tier": "Tier 0 + Tier 1 nodes",
+    "phase_2_modes": [
+      "domination",
+      "capture_flag"
+    ],
+    "phase_2_field": "urban_combat",
+    "phase_2_notes": "Test objective node durability. See if polycarbonate cases survive direct hits.",
+    "phase_3_weeks": "5",
+    "phase_3_tier": "Full system",
+    "phase_3_modes": [
+      "frontline",
+      "data_heist",
+      "search_destroy"
+    ],
+    "phase_3_notes": "Train 2 refs. Charging rack deployed. 1-page laminated SOP card.",
+    "pricing": {
+      "rental_add_on": "$8 per player per session",
+      "band_bom": "$12",
+      "payback_sessions": 2,
+      "target_margin": "60% after band cost recovered"
+    }
+  }
+}

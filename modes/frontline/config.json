@@ -1,0 +1,19 @@
+{
+  "name": "Frontline",
+  "tier": 2,
+  "blitz_ready": true,
+  "min_players": 8,
+  "max_players": 20,
+  "duration_min": 15,
+  "checkpoints": 3,
+  "reinforcements": 50,
+  "respawn_time_s": 3,
+  "description": "Checkpoint respawn. Mark hit, return to checkpoint, respawn. Deplete enemy reinforcements.",
+  "band_behavior": {
+    "hit": "'YOU ARE HIT! MARK BAND' + rapid buzz",
+    "marked": "'RETURN TO CHECKPOINT' + arrow",
+    "respawning": "3-2-1 countdown",
+    "respawned": "'BACK IN ACTION'"
+  },
+  "blitz_notes": "Best for Military Base field. 50 reinforcements = 25 min matches. Refs love the command station view."
+}

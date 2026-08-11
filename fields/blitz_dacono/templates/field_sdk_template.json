@@ -1,0 +1,28 @@
+{
+  "template_version": "1.0",
+  "description": "Copy this template to fields/<venue_id>/<field_id>/config.json and fill in survey data.",
+  "required_sections": [
+    "field_id",
+    "field_name",
+    "parent_venue",
+    "survey",
+    "dimensions",
+    "surface",
+    "features",
+    "systems",
+    "ghostnet_config",
+    "spectreband_config"
+  ],
+  "survey_methods": [
+    "satellite_imagery",
+    "drone_photogrammetry",
+    "lidar_scan",
+    "manual_measurement"
+  ],
+  "system_compatibility": {
+    "ghostnet": "Requires LoRaWAN gateway with 500m+ range. 1 gateway per 2-3 acres.",
+    "spectreband": "Requires 4-6 WiFi APs per acre for 2-3m accuracy."
+  },
+  "objective_placement": "See objectives.json for templates. Adapt to field features.",
+  "mode_selection": "See modes_matrix.json for compatibility ratings. 1-5 scale."
+}

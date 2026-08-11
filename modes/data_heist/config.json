@@ -1,0 +1,19 @@
+{
+  "name": "Data Heist",
+  "tier": 1,
+  "blitz_ready": true,
+  "min_players": 6,
+  "max_players": 12,
+  "duration_min": 15,
+  "terminals": 3,
+  "hack_time_s": 15,
+  "mask_duration_s": 5,
+  "mask_cooldown_s": 60,
+  "description": "Hack 3 terminals in sequence. Hacker position revealed. Can mask once per terminal.",
+  "band_behavior": {
+    "hacking": "Progress bar + 'HACKING' + purple LED",
+    "masked": "'MASKED' - no radar but hidden",
+    "hacked": "'TERMINAL HACKED' + success tone"
+  },
+  "blitz_notes": "Mask mechanic is brilliant. Kids figure out the risk/reward fast. Good for Hyperball field."
+}

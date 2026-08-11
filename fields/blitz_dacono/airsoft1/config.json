@@ -1,0 +1,98 @@
+{
+  "field_id": "blitz_airsoft1",
+  "field_name": "Blitz Airsoft 1",
+  "parent_venue": "Blitz Paintball Dacono",
+  "address": "5340 Summit Blvd, Dacono, CO 80514",
+  "coordinates": {
+    "lat": 40.0223,
+    "lon": -104.9555
+  },
+  "survey": {
+    "date": "2026-08-12T05:13:54.673837",
+    "method": "satellite_imagery",
+    "source_file": "_raw_airsoft1_satellite.png",
+    "disclaimer": "Imagery may become outdated. Replace with new survey when field layout changes."
+  },
+  "dimensions": {
+    "area_acres": 0.68,
+    "perimeter_m": 213.09,
+    "estimated_length_m": 65,
+    "estimated_width_m": 42
+  },
+  "surface": "artificial_turf",
+  "features": {
+    "bunkers": {
+      "count": 45,
+      "types": [
+        "inflatable",
+        "wooden_barrel",
+        "concrete_culvert"
+      ],
+      "density": "high"
+    },
+    "structures": [
+      "staging_area_north",
+      "netting_perimeter",
+      "light_poles"
+    ],
+    "terrain_notes": "Flat, well-maintained. No elevation changes. Netting on all sides."
+  },
+  "systems": {
+    "ghostnet_compatible": true,
+    "spectreband_compatible": true,
+    "recommended_primary": "ghostnet",
+    "reason": "Small dense field, high bunker count, fast games. LoRaWAN range overkill but reliable."
+  },
+  "ghostnet_config": {
+    "gateway_position": {
+      "x_m": 32,
+      "y_m": 21,
+      "z_m": 3,
+      "location": "staging area roof"
+    },
+    "objective_slots": 4,
+    "max_players": 20,
+    "lora_range_m": 500,
+    "notes": "Gateway on staging roof covers entire field. Objectives can be placed at corners or center."
+  },
+  "spectreband_config": {
+    "ap_count": 4,
+    "ap_placement": [
+      {
+        "id": "A1-AP-01",
+        "x_m": 10,
+        "y_m": 10,
+        "z_m": 2.5,
+        "channel": 1
+      },
+      {
+        "id": "A1-AP-02",
+        "x_m": 55,
+        "y_m": 10,
+        "z_m": 2.5,
+        "channel": 6
+      },
+      {
+        "id": "A1-AP-03",
+        "x_m": 10,
+        "y_m": 32,
+        "z_m": 2.5,
+        "channel": 11
+      },
+      {
+        "id": "A1-AP-04",
+        "x_m": 55,
+        "y_m": 32,
+        "z_m": 2.5,
+        "channel": 1
+      }
+    ],
+    "calibration": {
+      "path_loss_exponent": 2.3,
+      "tx_power_dbm": -30,
+      "rssi_at_1m": -40,
+      "multipath_factor": 1.0,
+      "notes": "Flat field, minimal multipath. 4 APs sufficient for 2-3m accuracy."
+    }
+  }
+}

@@ -1,0 +1,66 @@
+# SpectreBand / GhostNet — Git Ignore
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+.keys/
+secrets/
+*.pem
+*.key
+*.p12
+
+# Build artifacts
+build/
+dist/
+*.elf
+*.bin
+*.hex
+*.uf2
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+venv/
+.venv/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database (runtime only, not config)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Test outputs
+tests/output/
+tests/coverage/
+.coverage
+
+# Temporary files
+tmp/
+temp/
+*.tmp

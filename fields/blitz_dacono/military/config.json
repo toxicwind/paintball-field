@@ -1,0 +1,203 @@
+{
+  "field_id": "blitz_military",
+  "field_name": "Blitz Military Base",
+  "parent_venue": "Blitz Paintball Dacono",
+  "address": "5340 Summit Blvd, Dacono, CO 80514",
+  "coordinates": {
+    "lat": 40.0223,
+    "lon": -104.9555
+  },
+  "survey": {
+    "date": "2026-08-12T05:36:23.568261",
+    "method": "satellite_imagery",
+    "source_file": "_raw_military_satellite.png",
+    "disclaimer": "Imagery may become outdated. Field has been modified since satellite capture \u2014 speedball tournament bunkers may have been added. Verify layout before deployment.",
+    "change_log": [
+      {
+        "date": "2026-08-11",
+        "note": "Satellite survey shows pre-modification layout. Tournament bunkers may have been added since."
+      }
+    ]
+  },
+  "dimensions": {
+    "area_acres": 3.26,
+    "perimeter_m": 510.97,
+    "estimated_length_m": 118,
+    "estimated_width_m": 113
+  },
+  "surface": "dirt_grass_mix",
+  "features": {
+    "bunkers": {
+      "count": 200,
+      "types": [
+        "inflatable",
+        "wooden_barrel",
+        "concrete_culvert",
+        "speedball_tournament_bunkers"
+      ],
+      "density": "very_high",
+      "signature": "Massive field \u2014 largest at Blitz. Multiple distinct sub-zones."
+    },
+    "structures": [
+      "netting_perimeter",
+      "light_poles",
+      "castle_keep_subzone",
+      "helicopter_pad_subzone",
+      "north_building_complex",
+      "south_warehouse_ruins",
+      "west_staging_area",
+      "east_open_training_area"
+    ],
+    "sub_zones": {
+      "castle": {
+        "name": "Castle Keep",
+        "location": "northwest quadrant",
+        "area_acres": 0.68,
+        "features": [
+          "central_keep",
+          "perimeter_walls",
+          "gatehouse",
+          "courtyard"
+        ],
+        "best_modes": [
+          "king_of_the_hill",
+          "capture_flag",
+          "search_destroy"
+        ],
+        "notes": "Castle structure creates natural siege gameplay. Keep interior = hard objective."
+      },
+      "helicopter": {
+        "name": "Helicopter Pad",
+        "location": "center-north",
+        "area_acres": 0.15,
+        "features": [
+          "blackhawk_helicopter",
+          "concrete_pad",
+          "fuel_dump"
+        ],
+        "best_modes": [
+          "blackhawk_down"
+        ],
+        "notes": "Only paintball field in Colorado with real Blackhawk. Exclusive to Blitz."
+      },
+      "urban_ruins": {
+        "name": "Urban Ruins",
+        "location": "south half",
+        "area_acres": 1.8,
+        "features": [
+          "warehouse_ruins",
+          "bunker_maze",
+          "vehicle_wrecks"
+        ],
+        "best_modes": [
+          "dead_drop",
+          "domination",
+          "data_heist",
+          "battle_royale"
+        ],
+        "notes": "Dense urban layout. 200+ bunkers. Perfect for large-scale modes."
+      }
+    },
+    "terrain_notes": "Largest field at Blitz. Three distinct sub-zones: Castle (NW), Helicopter (center-N), Urban Ruins (south). Natural progression from siege to vehicle to urban."
+  },
+  "systems": {
+    "ghostnet_compatible": true,
+    "spectreband_compatible": true,
+    "recommended_primary": "ghostnet",
+    "reason": "Massive field needs central gateway or repeater. GhostNet LoRa range covers entire field. Sub-zones allow multiple game types without moving hardware."
+  },
+  "ghostnet_config": {
+    "gateway_position": {
+      "x_m": 59,
+      "y_m": 56,
+      "z_m": 5,
+      "location": "helicopter pad roof or central tower"
+    },
+    "objective_slots": 8,
+    "max_players": 50,
+    "lora_range_m": 500,
+    "notes": "Central gateway covers all sub-zones. 8 objectives: 2 castle, 2 helicopter, 4 urban. May need repeater at far south corner."
+  },
+  "spectreband_config": {
+    "ap_count": 10,
+    "ap_placement": [
+      {
+        "id": "MI-AP-01",
+        "x_m": 20,
+        "y_m": 20,
+        "z_m": 3,
+        "channel": 1
+      },
+      {
+        "id": "MI-AP-02",
+        "x_m": 98,
+        "y_m": 20,
+        "z_m": 3,
+        "channel": 6
+      },
+      {
+        "id": "MI-AP-03",
+        "x_m": 20,
+        "y_m": 93,
+        "z_m": 3,
+        "channel": 11
+      },
+      {
+        "id": "MI-AP-04",
+        "x_m": 98,
+        "y_m": 93,
+        "z_m": 3,
+        "channel": 1
+      },
+      {
+        "id": "MI-AP-05",
+        "x_m": 59,
+        "y_m": 30,
+        "z_m": 3,
+        "channel": 6
+      },
+      {
+        "id": "MI-AP-06",
+        "x_m": 59,
+        "y_m": 80,
+        "z_m": 3,
+        "channel": 11
+      },
+      {
+        "id": "MI-AP-07",
+        "x_m": 35,
+        "y_m": 56,
+        "z_m": 3,
+        "channel": 1
+      },
+      {
+        "id": "MI-AP-08",
+        "x_m": 83,
+        "y_m": 56,
+        "z_m": 3,
+        "channel": 6
+      },
+      {
+        "id": "MI-AP-09",
+        "x_m": 59,
+        "y_m": 56,
+        "z_m": 5,
+        "channel": 11
+      },
+      {
+        "id": "MI-AP-10",
+        "x_m": 10,
+        "y_m": 56,
+        "z_m": 3,
+        "channel": 1
+      }
+    ],
+    "calibration": {
+      "path_loss_exponent": 2.5,
+      "tx_power_dbm": -30,
+      "rssi_at_1m": -40,
+      "multipath_factor": 1.4,
+      "notes": "Large field with buildings = significant multipath. 10 APs for 3-4m accuracy across all sub-zones. Castle walls create shadow zones."
+    }
+  }
+}
