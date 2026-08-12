@@ -1,0 +1,430 @@
+{
+  "tier_id": "tier_p_ghostnet",
+  "tier_name": "GhostNet Pilot Tier",
+  "version": "2.0",
+  "status": "active",
+  "philosophy": "The band is ONLY for enable/object. No HUD. No map. No radar. The ref sees everything. Players coordinate through haptic+LED signals. LoRaWAN cuts through walls/bunkers/metal where WiFi dies.",
+  "key_principles": [
+    "LoRaWAN 915MHz ISM \u2014 penetrates metal, concrete, bunkers, helicopter frames",
+    "No OLED screen \u2014 players don't look at wrists during paintball",
+    "No haptic motor \u2014 adrenaline + gloves = can't feel vibration. Use piezo buzzer instead.",
+    "No 18650 batteries \u2014 fire/explosion hazard near solder. Use AA holders or CR123A.",
+    "No $1200 phone on field \u2014 ref gets dedicated rugged e-ink board with physical buttons",
+    "Sub-$250 kit for 8 players \u2014 pays for itself in 4-5 sessions at $5/player add-on"
+  ],
+  "hardware": {
+    "ghostband_p1": {
+      "description": "Player wristband \u2014 LoRa endpoint + RFID scanner + LED + buzzer",
+      "bom": [
+        {
+          "part": "Heltec HT-CT62",
+          "mpn": "HT-CT62",
+          "cost": 4.5,
+          "purpose": "ESP32-C3 + SX1262 LoRa 915MHz"
+        },
+        {
+          "part": "WS2812B RGB LED x3",
+          "mpn": "WS2812B",
+          "cost": 0.24,
+          "purpose": "Team color + status + hit indicator"
+        },
+        {
+          "part": "Piezo Buzzer",
+          "mpn": "SMT-0927-TW-3V-400",
+          "cost": 0.35,
+          "purpose": "Audio alerts \u2014 hit, objective, timer (85dB, audible through mask)"
+        },
+        {
+          "part": "MFRC522 RFID Reader",
+          "mpn": "MFRC522",
+          "cost": 1.2,
+          "purpose": "Scan objective nodes (13.56MHz)"
+        },
+        {
+          "part": "CR123A Battery Holder",
+          "mpn": "BH-123A",
+          "cost": 0.8,
+          "purpose": "Primary cell \u2014 NO LiPo soldering, 12+ hours"
+        },
+        {
+          "part": "PCB 25x35mm",
+          "mpn": "Custom",
+          "cost": 0.8,
+          "purpose": "2-layer FR4, minimal routing"
+        },
+        {
+          "part": "TPU Wrist Enclosure",
+          "mpn": "3D printed",
+          "cost": 0.6,
+          "purpose": "Impact-resistant wrist strap"
+        },
+        {
+          "part": "NATO Strap 20mm",
+          "mpn": "Nylon NATO",
+          "cost": 0.8,
+          "purpose": "Wrist mounting, paint-resistant"
+        },
+        {
+          "part": "Passives 0603",
+          "mpn": "R/C/pullups",
+          "cost": 0.3,
+          "purpose": "Decoupling, pullups, LED resistors"
+        }
+      ],
+      "total_cost": 9.59,
+      "battery": "CR123A 3V lithium primary, 1500mAh, 12+ hours active",
+      "safety": "No LiPo. No 18650. No soldering near battery. Disposable primary cell.",
+      "led_patterns": {
+        "solid_green": "Alive, team winning",
+        "fast_green_pulse": "Objective captured / point scored",
+        "red_flash": "Hit \u2014 call it out",
+        "red_sos": "Wounded \u2014 teammates must extract",
+        "yellow_blink": "1 minute remaining",
+        "blue_pulse": "Enemy near objective (from hub)",
+        "white_flash": "Game start / restart",
+        "off": "Eliminated / disconnected"
+      },
+      "buzzer_patterns": {
+        "short_beep": "Team comms: MOVE",
+        "long_beep": "Team comms: HOLD",
+        "double_beep": "Objective nearby",
+        "triple_beep": "Objective captured",
+        "continuous": "HIT \u2014 3 seconds",
+        "siren": "Game over"
+      }
+    },
+    "ghostnode_p1": {
+      "description": "Objective box \u2014 RFID target + LED ring + LoRa",
+      "bom": [
+        {
+          "part": "Heltec HT-CT62",
+          "mpn": "HT-CT62",
+          "cost": 4.5,
+          "purpose": "MCU + LoRa 915MHz"
+        },
+        {
+          "part": "MIFARE Classic 1K Tag",
+          "mpn": "MIFARE-1K",
+          "cost": 0.15,
+          "purpose": "Passive RFID target for band scan"
+        },
+        {
+          "part": "WS2812B LED Ring x8",
+          "mpn": "WS2812B",
+          "cost": 0.64,
+          "purpose": "360-degree status ring, visible 30m"
+        },
+        {
+          "part": "Piezo Buzzer",
+          "mpn": "SMT-0927-TW-3V-400",
+          "cost": 0.35,
+          "purpose": "Audio when captured/scored"
+        },
+        {
+          "part": "4x AA Battery Holder",
+          "mpn": "BH-4AA",
+          "cost": 0.9,
+          "purpose": "6V power \u2014 clip-in AAs, NO soldering"
+        },
+        {
+          "part": "Pelican-style Case",
+          "mpn": "1150-style",
+          "cost": 4.5,
+          "purpose": "IP67, paintball-proof enclosure"
+        },
+        {
+          "part": "PCB 40x40mm",
+          "mpn": "Custom",
+          "cost": 1.0,
+          "purpose": "2-layer, single-sided mount"
+        },
+        {
+          "part": "Passives 0603",
+          "mpn": "R/C/pullups",
+          "cost": 0.3,
+          "purpose": "Decoupling, LED resistors"
+        }
+      ],
+      "total_cost": 12.34,
+      "battery": "4x AA alkaline or NiMH, clip-in holder, swap in 10 seconds",
+      "safety": "NO 18650. NO LiPo. Standard AA batteries. Field-replaceable."
+    },
+    "ghosthub_p1": {
+      "description": "Field gateway \u2014 dual-channel LoRaWAN concentrator",
+      "bom": [
+        {
+          "part": "Heltec HT-M00",
+          "mpn": "HT-M00",
+          "cost": 35.0,
+          "purpose": "Dual-channel LoRaWAN gateway, SX1302 + ESP32"
+        },
+        {
+          "part": "USB-C Cable + 5V 2A Adapter",
+          "mpn": "Generic",
+          "cost": 8.0,
+          "purpose": "Gateway power"
+        },
+        {
+          "part": "Weatherproof Enclosure",
+          "mpn": "IP65 junction box",
+          "cost": 12.0,
+          "purpose": "Outdoor mount for gateway"
+        }
+      ],
+      "total_cost": 55.0,
+      "range": "2-5km outdoor, 500m+ through bunkers/trees/metal",
+      "frequency": "915 MHz ISM band \u2014 no license required in US"
+    },
+    "refboard_p1": {
+      "description": "Referee control board \u2014 NOT a tablet, NOT a phone",
+      "bom": [
+        {
+          "part": "Heltec HT-CT62",
+          "mpn": "HT-CT62",
+          "cost": 4.5,
+          "purpose": "MCU + LoRa receiver"
+        },
+        {
+          "part": "Waveshare 2.9\" e-Paper",
+          "mpn": "2.9inch-e-Paper",
+          "cost": 18.0,
+          "purpose": "Sunlight-readable, no backlight needed"
+        },
+        {
+          "part": "Tactile Buttons 12x12mm x6",
+          "mpn": "TS-1101",
+          "cost": 0.9,
+          "purpose": "Physical controls \u2014 gloves OK"
+        },
+        {
+          "part": "Piezo Buzzer",
+          "mpn": "SMT-0927-TW-3V-400",
+          "cost": 0.35,
+          "purpose": "Audio alerts for ref"
+        },
+        {
+          "part": "4x AA Battery Holder",
+          "mpn": "BH-4AA",
+          "cost": 0.9,
+          "purpose": "6V power \u2014 swapable in field"
+        },
+        {
+          "part": "Pelican-style Case",
+          "mpn": "1150-style",
+          "cost": 8.0,
+          "purpose": "Rugged carry case, IP67"
+        },
+        {
+          "part": "PCB 60x80mm",
+          "mpn": "Custom",
+          "cost": 2.0,
+          "purpose": "Button matrix + display header"
+        },
+        {
+          "part": "Passives 0603",
+          "mpn": "R/C/pullups",
+          "cost": 0.5,
+          "purpose": "Decoupling, button pullups"
+        }
+      ],
+      "total_cost": 35.15,
+      "display": "296x128 e-Paper, 2.9 inch, sunlight readable",
+      "buttons": [
+        "START \u2014 begin game",
+        "PAUSE \u2014 pause/resume",
+        "+TEAM \u2014 add player to team",
+        "-TEAM \u2014 remove player",
+        "MODE \u2014 cycle game modes",
+        "EMERGENCY \u2014 stop all, lights up"
+      ],
+      "safety": "NO phone on field. NO screen to break. Physical buttons work with gloves. IP67 case."
+    }
+  },
+  "kit_pricing": {
+    "8_player_kit": {
+      "ghostband_p1": {
+        "qty": 8,
+        "unit": 9.59,
+        "total": 76.72
+      },
+      "ghostnode_p1": {
+        "qty": 4,
+        "unit": 12.34,
+        "total": 49.36
+      },
+      "ghosthub_p1": {
+        "qty": 1,
+        "unit": 55.0,
+        "total": 55.0
+      },
+      "refboard_p1": {
+        "qty": 1,
+        "unit": 35.15,
+        "total": 35.15
+      },
+      "spare_cr123a": {
+        "qty": 16,
+        "unit": 1.5,
+        "total": 24.0,
+        "notes": "2 spares per band"
+      },
+      "spare_aa": {
+        "qty": 24,
+        "unit": 0.5,
+        "total": 12.0,
+        "notes": "6 spares per node + refboard"
+      },
+      "grand_total": 252.23
+    },
+    "break_even_analysis": {
+      "$3_add_on": {
+        "revenue_per_session": 24,
+        "sessions_to_break_even": 10.5
+      },
+      "$4_add_on": {
+        "revenue_per_session": 32,
+        "sessions_to_break_even": 7.9
+      },
+      "$5_add_on": {
+        "revenue_per_session": 40,
+        "sessions_to_break_even": 6.3
+      },
+      "$6_add_on": {
+        "revenue_per_session": 48,
+        "sessions_to_break_even": 5.3
+      },
+      "$7_add_on": {
+        "revenue_per_session": 56,
+        "sessions_to_break_even": 4.5
+      },
+      "$8_add_on": {
+        "revenue_per_session": 64,
+        "sessions_to_break_even": 3.9
+      },
+      "$10_add_on": {
+        "revenue_per_session": 80,
+        "sessions_to_break_even": 3.2
+      }
+    },
+    "recommended": "$5/player add-on = break even in 6 sessions. Bundled into $39.95 group rate = $44.95 total."
+  },
+  "architecture": {
+    "description": "LoRaWAN Class A, uplink-heavy. Bands send heartbeats every 5s, objective scans immediately.",
+    "protocol_stack": "LoRaWAN 915MHz -> GhostHub -> MQTT -> Field Server -> RefBoard",
+    "latency": "1-3s end-to-end. Fine for paintball pacing.",
+    "penetration": "Cuts through: Blackhawk metal frame, castle concrete walls, warehouse corrugated steel, 200+ bunkers, trees, netting",
+    "why_not_wifi": "WiFi 2.4GHz dies in metal structures, has 50-100m range, requires 6+ anchor APs. LoRa needs 1 gateway for entire 7.28-acre complex."
+  },
+  "game_modes": [
+    {
+      "id": "blackhawk_down",
+      "name": "Blackhawk Down",
+      "exclusive_to": "Blitz Paintball Military Base field",
+      "description": "Defend/capture crashed UH-60 Blackhawk. 3 RFID tags hidden in/around helicopter.",
+      "min_players": 8,
+      "duration_min": 15,
+      "teams": {
+        "attackers": "unlimited respawns",
+        "defenders": "2 lives each"
+      },
+      "special_rules": [
+        "Hot zone: helo interior = radioactive, 30s max then eliminated",
+        "Tag reclamation: defenders can reset captured tags"
+      ]
+    },
+    {
+      "id": "dead_drop",
+      "name": "Dead Drop",
+      "description": "Sequential RFID objective hunt. Warm/cold hints via LED color.",
+      "min_players": 6,
+      "duration_min": 20
+    },
+    {
+      "id": "king_of_the_hill",
+      "name": "King of the Hill",
+      "description": "Hold central GhostNode for 60 seconds cumulative.",
+      "min_players": 6,
+      "duration_min": 15
+    },
+    {
+      "id": "search_rescue",
+      "name": "Search & Rescue",
+      "description": "Extract wounded teammates to extraction point. Wounded = yellow LED, must be scanned by teammate.",
+      "min_players": 8,
+      "duration_min": 20
+    }
+  ],
+  "referee_dashboard": {
+    "display": "e-Paper 296x128, sunlight readable",
+    "refresh": "2 seconds",
+    "views": [
+      "LIVE STATUS: All players (alive/eliminated/wounded/disconnected)",
+      "OBJECTIVES: Capture progress in real-time per node",
+      "TIMER: Countdown with auto-announcements at 5min, 2min, 1min",
+      "TEAM BALANCE: Player counts per team, auto-alert if uneven",
+      "EMERGENCY: One-button game stop, all bands flash white"
+    ],
+    "no_gps": "Ref does NOT see player positions. Only status and objectives. Focus on safety and fairness, not stalking."
+  },
+  "comparison_to_tiers_0_3": {
+    "display": {
+      "tier_0_3": "OLED radar screen",
+      "tier_p": "3x RGB LED only"
+    },
+    "positioning": {
+      "tier_0_3": "WiFi RSSI trilateration (6 APs)",
+      "tier_p": "None \u2014 not needed"
+    },
+    "range": {
+      "tier_0_3": "50-100m (WiFi)",
+      "tier_p": "2-5km (LoRa)"
+    },
+    "penetration": {
+      "tier_0_3": "Poor through metal/concrete",
+      "tier_p": "Excellent through metal/concrete/bunkers"
+    },
+    "battery": {
+      "tier_0_3": "4 hours (LiPo)",
+      "tier_p": "12+ hours (CR123A primary)"
+    },
+    "player_cost": {
+      "tier_0_3": "$12/band",
+      "tier_p": "$9.59/band"
+    },
+    "field_kit_cost": {
+      "tier_0_3": "$295 (8 players)",
+      "tier_p": "$252 (8 players)"
+    },
+    "ref_oversight": {
+      "tier_0_3": "Tournament tablet only",
+      "tier_p": "Built-in rugged ref board"
+    },
+    "phone_required": {
+      "tier_0_3": "No",
+      "tier_p": "No"
+    },
+    "internet_required": {
+      "tier_0_3": "No",
+      "tier_p": "No"
+    },
+    "player_map": {
+      "tier_0_3": "Yes",
+      "tier_p": "No"
+    },
+    "player_positions": {
+      "tier_0_3": "Yes",
+      "tier_p": "No"
+    },
+    "team_comms": {
+      "tier_0_3": "Screen icons",
+      "tier_p": "LED + buzzer patterns"
+    }
+  },
+  "roadmap": {
+    "week_1_2": "Build 2 GhostBands + 1 GhostNode + 1 GhostHub. Test LoRa range on Blitz Hyperball field.",
+    "week_3_4": "Build full 8-player kit. Test all 4 game modes with volunteer players.",
+    "week_5": "Refine LED/buzzer patterns based on player feedback. Lock firmware.",
+    "week_6": "Document, photograph, publish. Open source the BOM."
+  },
+  "license": "MIT"
+}

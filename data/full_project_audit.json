@@ -1,0 +1,271 @@
+{
+  "project": "SpectreBand / GhostNet",
+  "audit_timestamp": "2026-08-12T07:44:38.523284",
+  "repo_path": "/mnt/agents/output/paintball-field",
+  "remote": "https://github.com/toxicwind/paintball-field.git",
+  "last_push": "36eed1c v0.97 GhostNet field configs",
+  "structure": {
+    "tiers": {
+      "tier_0_band": {
+        "status": "legacy",
+        "display": "OLED radar",
+        "cost_per_band": 12.0,
+        "notes": "SpectreBand v1 \u2014 WiFi positioning, full HUD"
+      },
+      "tier_1_objective": {
+        "status": "legacy",
+        "display": "OLED + objective interaction",
+        "cost_per_band": 14.0,
+        "notes": "Adds RFID objective boxes"
+      },
+      "tier_2_hitdetect": {
+        "status": "legacy",
+        "display": "OLED + hit detection",
+        "cost_per_band": 18.0,
+        "notes": "Adds piezo shock sensor + IMU"
+      },
+      "tier_3_command": {
+        "status": "legacy",
+        "display": "OLED + tournament tablet",
+        "cost_per_band": 22.0,
+        "notes": "Full tournament kit with ref tablet"
+      },
+      "tier_p_ghostnet": {
+        "status": "active_dev",
+        "display": "3x LED only",
+        "cost_per_band": 10.1,
+        "notes": "LoRaWAN-first, no screen, no position, ref-controlled"
+      }
+    },
+    "modes": {
+      "total": 16,
+      "list": [
+        "battle_royale",
+        "blackhawk_down",
+        "blindside",
+        "capture_flag",
+        "data_heist",
+        "dead_drop",
+        "domination",
+        "frontline",
+        "ghost",
+        "hunter_prey",
+        "infection",
+        "overwatch",
+        "search_destroy",
+        "spectre",
+        "tournament",
+        "vip_escort"
+      ],
+      "ghostnet_compatible": [
+        "blackhawk_down",
+        "dead_drop",
+        "domination",
+        "search_destroy"
+      ]
+    },
+    "fields": {
+      "blitz_dacono": {
+        "total_acres": 7.28,
+        "fields": {
+          "military": {
+            "acres": 3.26,
+            "position": "north",
+            "asset": "Blackhawk helicopter",
+            "bunkers": 80
+          },
+          "castle": {
+            "acres": 0.68,
+            "position": "middle",
+            "asset": "Central keep + courtyard gates",
+            "bunkers": 55
+          },
+          "urban_combat": {
+            "acres": 3.34,
+            "position": "south",
+            "asset": "Warehouse ruins",
+            "bunkers": 200
+          },
+          "hyperball": {
+            "acres": null,
+            "position": null,
+            "asset": "Speedball tournament",
+            "bunkers": 68
+          },
+          "hyper_spool": {
+            "acres": null,
+            "position": null,
+            "asset": "Small groups",
+            "bunkers": null
+          },
+          "airsoft1": {
+            "acres": null,
+            "position": null,
+            "asset": "Airsoft",
+            "bunkers": null
+          },
+          "airsoft2": {
+            "acres": null,
+            "position": null,
+            "asset": "Airsoft",
+            "bunkers": null
+          }
+        },
+        "connections": "Military(N) <-> Castle(M) <-> Urban Combat(S) via courtyard fencing"
+      }
+    },
+    "hardware_versions": {
+      "band_v1.0": {
+        "bom_lines": 12,
+        "total_cost": 12.0,
+        "has_oled": true,
+        "has_haptic": true,
+        "has_18650": false
+      },
+      "band_v1.1": {
+        "bom_lines": 15,
+        "total_cost": 22.0,
+        "has_oled": true,
+        "has_haptic": true,
+        "has_18650": false,
+        "has_imu": true
+      },
+      "ghostband_p1": {
+        "bom_lines": 6,
+        "total_cost": 10.1,
+        "has_oled": false,
+        "has_haptic": true,
+        "has_18650": false,
+        "has_rfid": true
+      }
+    },
+    "firmware_projects": [
+      "ap_node",
+      "band",
+      "ghostband_p1",
+      "ghosthub_p1"
+    ],
+    "server_projects": [
+      "field_server",
+      "ghostnet"
+    ],
+    "test_framework": "Perl Test::Harness",
+    "sdk": [
+      "field_sdk/renderer.py",
+      "field_sdk/topdown.py"
+    ]
+  },
+  "critical_issues": [
+    {
+      "id": "CI-001",
+      "severity": "high",
+      "component": "ghostnode_p1",
+      "issue": "18650 battery in objective node \u2014 soldering near lithium cell = fire/explosion hazard",
+      "fix": "Replace with 3x AA battery holder or USB power bank"
+    },
+    {
+      "id": "CI-002",
+      "severity": "high",
+      "component": "ghostband_p1",
+      "issue": "Haptic motor \u2014 players in fast paintball won't feel vibration through gloves/mask adrenaline",
+      "fix": "Remove haptic. Use bright LED + piezo buzzer (audible) or just LED patterns"
+    },
+    {
+      "id": "CI-003",
+      "severity": "medium",
+      "component": "ghostband_p1",
+      "issue": "350mAh LiPo in band \u2014 soft pouch can puncture from paintball impact",
+      "fix": "Use hard-case LiPo (602030 300mAh hard shell) or CR123A primary cell holder"
+    },
+    {
+      "id": "CI-004",
+      "severity": "medium",
+      "component": "ref_interface",
+      "issue": "Tablet-based ref control \u2014 refs don't want $1200 phones on paintball field",
+      "fix": "Dedicated rugged ref board with physical buttons, e-ink or transflective LCD"
+    },
+    {
+      "id": "CI-005",
+      "severity": "high",
+      "component": "pricing",
+      "issue": "$168 kit at $8/player = 21 sessions to break even. Field owners won't wait that long.",
+      "fix": "$5/player add-on = 4 sessions. Or bundle into group rate."
+    }
+  ],
+  "competitive_landscape": {
+    "colorado_fields": [
+      {
+        "name": "Blitz Paintball",
+        "location": "Dacono, CO",
+        "fields": 4,
+        "acres": 7.28,
+        "group_rate": 34.95,
+        "signature": "Blackhawk helicopter",
+        "tier_p_ready": true
+      },
+      {
+        "name": "American Paintball Coliseum",
+        "location": "Denver, CO",
+        "fields": 2,
+        "acres": 0.5,
+        "group_rate": 30.0,
+        "signature": "Indoor CQB",
+        "tier_p_ready": false
+      },
+      {
+        "name": "Dynamic Paintball",
+        "location": "Colorado Springs, CO",
+        "fields": 3,
+        "acres": 5.0,
+        "group_rate": 27.0,
+        "signature": "Speedball tournament",
+        "tier_p_ready": true
+      },
+      {
+        "name": "Paintball Adventures",
+        "location": "Denver, CO",
+        "fields": 3,
+        "acres": 8.0,
+        "group_rate": 33.0,
+        "signature": "Castle + village",
+        "tier_p_ready": true
+      },
+      {
+        "name": "G-Force Adventures",
+        "location": "Denver, CO",
+        "fields": 2,
+        "acres": 3.0,
+        "group_rate": 25.0,
+        "signature": "Indoor + outdoor",
+        "tier_p_ready": false
+      },
+      {
+        "name": "Foxhole Paintball",
+        "location": "Colorado Springs, CO",
+        "fields": 1,
+        "acres": 2.0,
+        "group_rate": 24.0,
+        "signature": "Woodsball",
+        "tier_p_ready": true
+      },
+      {
+        "name": "Flatline Paintball",
+        "location": "Pueblo, CO",
+        "fields": 2,
+        "acres": 4.0,
+        "group_rate": 25.0,
+        "signature": "Military vehicles",
+        "tier_p_ready": true
+      },
+      {
+        "name": "Battle Creek Paintball",
+        "location": "Westminster, CO",
+        "fields": 1,
+        "acres": 1.5,
+        "group_rate": 22.0,
+        "signature": "Indoor speedball",
+        "tier_p_ready": false
+      }
+    ]
+  }
+}
